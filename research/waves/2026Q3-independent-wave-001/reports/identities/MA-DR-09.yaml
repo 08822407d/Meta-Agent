@@ -1,0 +1,183 @@
+research_id: MA-DR-09
+artifact_role: exact_operator_exported_Deep_Research_report_identity
+target_truth_source: false
+canonical_transport_task: META-AGENT-PR248-HANDOFF-REPAIR-001
+repair_PR: PENDING_REPAIR_PR
+original_report:
+  suggested_filename: MA-DR-09-report.md
+  encoding: UTF-8
+  bytes: 88451
+  lines: 1493
+  sha256: f3a7debd08b3ff8edf89d2fb51492e03a25dfa43168a9014c9f7c1e4319912e9
+transport:
+  encoding: bzip2_level_9_then_Base64_of_exact_UTF8_bytes
+  compressed_bytes: 27382
+  compressed_sha256: 3adfc7b750edcf9184ed487574690125158531206fb43d26d1b534d87a1a448a
+  base64_characters: 36512
+  physical_components: 37
+  remote_component_blob_identity: PENDING_FINAL_REMOTE_VERIFICATION
+  remote_report_reconstruction_SHA256: PENDING_FINAL_REMOTE_VERIFICATION
+reconstruction:
+  rules:
+    - Read all listed components as ASCII in exact order.
+    - Concatenate without separators or normalization.
+    - Base64-decode to the bzip2 byte stream.
+    - Verify compressed SHA-256.
+    - bzip2-decompress.
+    - Verify 88451 decoded bytes and original SHA-256.
+  ordered_components:
+    - path: reports/MA-DR-09-report-bz2-base64/part-001.txt
+      characters: 1000
+      sha256: ba5cf9883da2ec873330c412bf807049ec89fdbe5755c8ad9d911037e63085be
+      git_blob_sha1: 83f8552a37d94aa42162265a2fdcf521ba27d1c0
+    - path: reports/MA-DR-09-report-bz2-base64/part-002.txt
+      characters: 1000
+      sha256: 9b7ddea61ac73c018ac3232c80436198c14ae51fc053e40372b128dfe0bc367f
+      git_blob_sha1: cf76f97bb46f20804f91ec1bb3a1d4c7d229b65b
+    - path: reports/MA-DR-09-report-bz2-base64/part-003.txt
+      characters: 1000
+      sha256: aa3817cf7d3234fdc5404a77ba7bec5d16fc73af54a6580821be1458ab2ea180
+      git_blob_sha1: 69b66d5ec7e3f78ed509147b0ac1b030fa53c234
+    - path: reports/MA-DR-09-report-bz2-base64/part-004.txt
+      characters: 1000
+      sha256: 9ae460896b68d1e678681548327c611fc2ef36df7af99b588a0a08ef0e28062a
+      git_blob_sha1: 1390606f833cc0f868fe5ebaaf2974b190098a2a
+    - path: reports/MA-DR-09-report-bz2-base64/part-005.txt
+      characters: 1000
+      sha256: 1cbcaa9e6375a7a66afcc57d838a944a591f62bfecdad1c5ea50194c737f2447
+      git_blob_sha1: 570325580274a18cd6e8322faae5089fd052f095
+    - path: reports/MA-DR-09-report-bz2-base64/part-006.txt
+      characters: 1000
+      sha256: 99254dbf11d62a7c34d285fe04b8a9d93e5b62340a767fa6cee68174ccf5576e
+      git_blob_sha1: a0e07ae3bcde6d0a237a7307f8014f9ea8ac97ec
+    - path: reports/MA-DR-09-report-bz2-base64/part-007.txt
+      characters: 1000
+      sha256: 9fb149d8972ececa9ac5bf01fe2712c525dfe9457734be79d2fee08438bf5ea8
+      git_blob_sha1: 7f1936932236c8ad1ef530fc642d64ebec85d0a1
+    - path: reports/MA-DR-09-report-bz2-base64/part-008.txt
+      characters: 1000
+      sha256: f96165cbd53bff41b2bdef2947fa77e5ef755b6ff51bc60bd74fc1a4bdb30daf
+      git_blob_sha1: 4c90d19426a9718a629676d01142c0fb6cd8b1d7
+    - path: reports/MA-DR-09-report-bz2-base64/part-009.txt
+      characters: 1000
+      sha256: 93927a1543d1a33584a53d145fd6e017c9ed3c8c87010930c7f9291f6be67732
+      git_blob_sha1: e20ec1ab84159f6770fc6be1b252c36c781d2231
+    - path: reports/MA-DR-09-report-bz2-base64/part-010.txt
+      characters: 1000
+      sha256: d55923e6c2193176b1dbdf0532f3a2d34b78a4d71078cd73b717071e56dd9353
+      git_blob_sha1: 1842c675cf3e544f50f559a179c987420cfb7ff3
+    - path: reports/MA-DR-09-report-bz2-base64/part-011.txt
+      characters: 1000
+      sha256: 57a52cdd3ffc6f45dca204297f8816157f63f843fc61f4ca5de56c336618e53d
+      git_blob_sha1: 7067e2056a4c7952da2cccae8b4cf47c041891d5
+    - path: reports/MA-DR-09-report-bz2-base64/part-012.txt
+      characters: 1000
+      sha256: ae6e1bd670125d5884a86de9101e917d98a8ae15a3619a0c07f3507b39d380f7
+      git_blob_sha1: 34f864461e0ba04a8a185896b8f29f615da01ea3
+    - path: reports/MA-DR-09-report-bz2-base64/part-013.txt
+      characters: 1000
+      sha256: 41e7e8c5a31cab4527f983ff12f08b203132dc4ad92db9878357ec16c219d53e
+      git_blob_sha1: e60fe5a6bdfd68a4ed34d1d43e4229988a7b34a0
+    - path: reports/MA-DR-09-report-bz2-base64/part-014.txt
+      characters: 1000
+      sha256: 65a1491b7727191e508af11e4fe35e630c43d16a197d8b31579f52aca8380e45
+      git_blob_sha1: 0e4480872a9555369cb7a50378e4d5f3b1cf925e
+    - path: reports/MA-DR-09-report-bz2-base64/part-015.txt
+      characters: 1000
+      sha256: 91dd68c9574f6b34b700897efe1338c1faf7f782df29c83c4c10dfa487bad2dd
+      git_blob_sha1: 73e622a96d04e3b2ea592c23a2a4d44c7cd1b857
+    - path: reports/MA-DR-09-report-bz2-base64/part-016.txt
+      characters: 1000
+      sha256: 480982a4fa09bd8171641ba5354cc1afc4607930be06debd15390b0c9d92e0c0
+      git_blob_sha1: acb149bee1b59991bb367ad880afb4ce940c153a
+    - path: reports/MA-DR-09-report-bz2-base64/part-017.txt
+      characters: 1000
+      sha256: 73f8f90a17cd45539ccb311de1778591430f108674ab639d7cba961c9fc978b7
+      git_blob_sha1: 2add5fe9a4fb914362fe8d94c69d4604cb2863ab
+    - path: reports/MA-DR-09-report-bz2-base64/part-018.txt
+      characters: 1000
+      sha256: 79d019045ccf456f1894ab7d26d60078391856713c31adec103df26196ed8839
+      git_blob_sha1: 731d501467c3e96e508f5bde12566d8d1f6ef32b
+    - path: reports/MA-DR-09-report-bz2-base64/part-019.txt
+      characters: 1000
+      sha256: 9039f5d711dd36dabe0097f40231374a42defb912b2dfea62e5fc18ac8497297
+      git_blob_sha1: 3a3c020e8c6fe5d8134787a40e317cc98ac14654
+    - path: reports/MA-DR-09-report-bz2-base64/part-020.txt
+      characters: 1000
+      sha256: 952399fb67cb00b8e703e9f59db358aac51d78707a9daba14fa18d262b576c89
+      git_blob_sha1: 0397cbdf1d0b5ce2b68e8b9ee3a76fd9f601895b
+    - path: reports/MA-DR-09-report-bz2-base64/part-021.txt
+      characters: 1000
+      sha256: f9cdf5824aa332ba9dc76494ca2c071a2526c13e8263ec8ccc982deaf8e9540c
+      git_blob_sha1: f2d652a587cb701936b3e91a57db8d4c8c987513
+    - path: reports/MA-DR-09-report-bz2-base64/part-022.txt
+      characters: 1000
+      sha256: 2d27fda282ae8ae04873b3e7f777c9d6ea4b7da0da32f470ef7bab138179175b
+      git_blob_sha1: 8ecbc37b9619d0ef532bd9416e3446dbc7318b78
+    - path: reports/MA-DR-09-report-bz2-base64/part-023.txt
+      characters: 1000
+      sha256: eb6836157904502b382d888c9d118f961adfced4fb8b238dd5cb91b212d11674
+      git_blob_sha1: a56b20396c93b2105778e4e9b8df75a02636eb2e
+    - path: reports/MA-DR-09-report-bz2-base64/part-024.txt
+      characters: 1000
+      sha256: d98504b81f64b2ea7f20f174d4132c46e06da4bbfe1e0544c3738a3c4b739bb3
+      git_blob_sha1: 683b5bc9d95ffda3496aed2bdba6fa44cb3ed871
+    - path: reports/MA-DR-09-report-bz2-base64/part-025.txt
+      characters: 1000
+      sha256: 497c9b39b4ed3e901e7ea44bc93643da755efb80dbccb4e3a41a0eb317443d8d
+      git_blob_sha1: b7b0efdd96b297b25c37a47c2fe87b046e53c1c6
+    - path: reports/MA-DR-09-report-bz2-base64/part-026.txt
+      characters: 1000
+      sha256: bbc7d35b424d82f79c17b940208399acc96a3d705536be782f2c39b5177bf402
+      git_blob_sha1: a16bd8e47009171fcd168d5af2d25e7b20831cbe
+    - path: reports/MA-DR-09-report-bz2-base64/part-027.txt
+      characters: 1000
+      sha256: 32f4c195d5c194acfeab3afd320ef224f8d1a778a7142f9fc249d4148dcc6b66
+      git_blob_sha1: ae1c95864ace3f9b0d50072636d809607371a75f
+    - path: reports/MA-DR-09-report-bz2-base64/part-028.txt
+      characters: 1000
+      sha256: 50a8e7f81c851a3c7ca51863f0c4ef9eb03b688053fa467e5ab09f3e9bf808ff
+      git_blob_sha1: 245636f798efcc02dd2ad39a5ad48c9845cf9f27
+    - path: reports/MA-DR-09-report-bz2-base64/part-029.txt
+      characters: 1000
+      sha256: a6581c05c10329c885f4ed201c46653c3064c107023951c25ad4182fb663337c
+      git_blob_sha1: 31b1dbd40a452f83dbbfa36afd72c901b18bbd82
+    - path: reports/MA-DR-09-report-bz2-base64/part-030.txt
+      characters: 1000
+      sha256: beaecd121e684b659f13bb9e97b715d65e594f0046b60fec08d1885f0c03f2d5
+      git_blob_sha1: ca310d5b236fa5ed9416e99bd17704d07682c75f
+    - path: reports/MA-DR-09-report-bz2-base64/part-031.txt
+      characters: 1000
+      sha256: 3ef6239b79c6c8a240173b97f6781def8f5e33db7a4b7ab2957724286b665115
+      git_blob_sha1: b327ae7cbd2f339846c80d26edf65312c8eb1885
+    - path: reports/MA-DR-09-report-bz2-base64/part-032.txt
+      characters: 1000
+      sha256: 76334fb65e42e6b08f4f98c1a309278066299fcdf647b496e505613a4f1279d5
+      git_blob_sha1: 264dc8c15100339ad67aa75d76f3072ec574ec4a
+    - path: reports/MA-DR-09-report-bz2-base64/part-033.txt
+      characters: 1000
+      sha256: 6bff8d16ae546d775d28ea3c5214fa37773df9d2e3c93714766994f6f9e6411c
+      git_blob_sha1: a84e3b271024e539ee62fd5cdff5e4b1aa0f4b47
+    - path: reports/MA-DR-09-report-bz2-base64/part-034.txt
+      characters: 1000
+      sha256: 4ee5e1fe9b89505c474054c0a520abf391a70b2ac7148dd3ec62d77f2639c3d1
+      git_blob_sha1: c4979d7486d3b0b952b7cc2232f91d49713dd19c
+    - path: reports/MA-DR-09-report-bz2-base64/part-035.txt
+      characters: 1000
+      sha256: 95d47859c2a54451766863095a02e672589ff86ad02a337ab043a0cc7ccb5d6d
+      git_blob_sha1: 335094786eb1d63baa02c8ae6a62b1f27fe83db3
+    - path: reports/MA-DR-09-report-bz2-base64/part-036.txt
+      characters: 1000
+      sha256: ce27b5484197962fa46a5bb3ad52d8b7cc427e7d37ba1082fb274023ff876e7e
+      git_blob_sha1: 3fb41184310fafdfa71931cbe79b9c70e3a518ac
+    - path: reports/MA-DR-09-report-bz2-base64/part-037.txt
+      characters: 512
+      sha256: 9a63388605225241a10e0d4dbebff5dfc4f00f5b7518d6d4ab1aa6023afb102e
+      git_blob_sha1: 878f96e968fafcbf6cf5fb791b4e48a6590780ea
+historical_failed_transport:
+  PR: 248
+  path: reports/MA-DR-09-report-parts-base64/
+  status: noncanonical_incomplete_transport_removed_by_repair_PR
+limitations:
+  - Byte identities prove exact preservation, not factual correctness.
+  - The report remains non-execution evidence.

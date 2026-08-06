@@ -1,0 +1,155 @@
+package_id: META-AGENT-DR-01-05-EVIDENCE-002
+artifact_role: target_specific_research_evidence_package
+status: prepared_for_repository_review
+created_by_task: META-AGENT-RESEARCH-EVIDENCE-REPAIR-003
+target_project_id: meta-agent
+target_truth_source: false
+execution_source: false
+repository_visibility_treatment: public_risk
+material_preflight:
+  public_or_non_sensitive_research_material: true
+  secrets_credentials_tokens_detected: false
+  private_source_detected: false
+  personal_or_confidential_data_detected: false
+  raw_private_chat_or_voice_transcript_included: false
+  lost_conversation_reconstructed_as_fact: false
+operator_reported_research_context:
+  surface_or_mode_verbatim: gpt-5.5 pro 扩展深度研究
+  Mnemosyne_repository_connected: true
+  web_search_enabled: true
+  exact_served_backend_status: unknown_or_not_attestable
+  execution_date: unknown_not_recorded_in_exported_reports
+logical_members:
+- research_id: MA-DR-01
+  topic: Meta-Agent feasibility and reference architecture
+  prompt:
+    archive_path: meta-agent-dr-01-05/prompts/MA-DR-01-feasibility-and-reference-architecture-prompt.md
+    bytes: 6957
+    sha256: 992d5c10619fe33b3f25db6e7aae831d67c36d66f264dd720ef26cf8e69036ae
+  report:
+    archive_path: meta-agent-dr-01-05/reports/MA-DR-01-feasibility-and-reference-architecture-report.md
+    bytes: 27564
+    sha256: dc6aa57de4eb7410b1a53f8faf223bdb0510293e2bbac28f16c901a3ac56a47f
+    opaque_chat_citation_groups: 58
+    direct_http_urls: 0
+- research_id: MA-DR-02
+  topic: Single-Agent, workflow, and multi-Agent design framework
+  prompt:
+    archive_path: meta-agent-dr-01-05/prompts/MA-DR-02-single-agent-workflow-multi-agent-prompt.md
+    bytes: 6608
+    sha256: 009ab64ec82169181ba4dafe22f70b81d9e5c2f7e387dc0ae7f93057c34bfa7e
+  report:
+    archive_path: meta-agent-dr-01-05/reports/MA-DR-02-single-agent-workflow-multi-agent-report.md
+    bytes: 34693
+    sha256: 7d3a97858c8aaa935e1672dada623a9d1ff854daf155f3454d86c9966a778e66
+    opaque_chat_citation_groups: 85
+    direct_http_urls: 0
+- research_id: MA-DR-03
+  topic: External memory, handoff, context migration, and experience learning
+  prompt:
+    archive_path: meta-agent-dr-01-05/prompts/MA-DR-03-memory-handoff-experience-learning-prompt.md
+    bytes: 6633
+    sha256: 9bad7b851642f6f69faf5b327849b78126789702f32895d0dc98c65de87aa02b
+  report:
+    archive_path: meta-agent-dr-01-05/reports/MA-DR-03-memory-handoff-experience-learning-report.md
+    bytes: 43123
+    sha256: ddc5388739a78539f27641e45d25fbcb1d58a3f9e301fa577877d6338f7f9083
+    opaque_chat_citation_groups: 58
+    direct_http_urls: 0
+- research_id: MA-DR-04
+  topic: Tool/model/service routing and human decision boundaries
+  prompt:
+    archive_path: meta-agent-dr-01-05/prompts/MA-DR-04-tool-model-routing-human-boundaries-prompt.md
+    bytes: 6841
+    sha256: 9b51c22a3dcb9e03b4776bcae6bb77dd47a5c492c801dd1cf2195527f52ec187
+  report:
+    archive_path: meta-agent-dr-01-05/reports/MA-DR-04-tool-model-routing-human-boundaries-report.md
+    bytes: 30958
+    sha256: 78ead646894f88c98c87b5944b27e3031a5c568cf425dfb16528262e1f31e459
+    opaque_chat_citation_groups: 38
+    direct_http_urls: 0
+- research_id: MA-DR-05
+  topic: Evaluation, observability, failure diagnosis, and continuous improvement
+  prompt:
+    archive_path: meta-agent-dr-01-05/prompts/MA-DR-05-evaluation-observability-improvement-prompt.md
+    bytes: 6680
+    sha256: 580cad6102b6d874586bea24630fa1ff10b940027f57e7150e54aa167102d218
+  report:
+    archive_path: meta-agent-dr-01-05/reports/MA-DR-05-evaluation-observability-improvement-report.md
+    bytes: 38834
+    sha256: 0a6efd8713ac9f70c88905fc314fcf29fb3e7bfdd84995bfc81b2770e85f2708
+    opaque_chat_citation_groups: 44
+    direct_http_urls: 0
+citation_portability:
+  total_opaque_chat_citation_groups: 283
+  total_direct_http_urls_in_report_exports: 0
+  source_panel_or_direct_url_manifest_included: false
+  status: report_bodies_preserved_but_original_source_link_portability_incomplete
+archive:
+  format: deterministic_GNU_tar_mtime0_uid0_gid0_mode0644_then_bzip2_level9_then_Base64
+  logical_root: meta-agent-dr-01-05/
+  tar:
+    bytes: 225280
+    sha256: df72aeeacda2d4e4d46054e1870ec77ed88dfc62c509e0a9633f7931435e69c0
+  tar_bz2:
+    bytes: 56379
+    sha256: c82657ff9281985c3f9cdea373361972066ea7ca70f6b430f3df9228555bc327
+  Base64:
+    characters_without_line_breaks: 75172
+    sha256: 9b4baf8ba0d823d8ac7cef69cfdcc1d051281821db415e27d63696a04aec63da
+  chunk_glob: target-projects/meta-agent/research/archive/META-AGENT-DR-01-05-EVIDENCE-002.tar.bz2.base64.chunk-*.txt
+  chunk_order: lexical_filename_order
+  physical_chunk_count: 38
+  physical_chunk_git_blobs:
+    '001': 0e174aa2cb83ccd53dcb08f11b2ea5dd01008c20
+    '002': 41c8c559f6476cf248618f5efb1f59f49f770549
+    '003': 491712b3f822fa34c1552825d0dfa3209402debc
+    '004': 22007e9e8e7d2b07d899046111aa67a49a2d1d38
+    '005': dd5e3dc40ffe7975a859e8b4a084448d717e5158
+    '006': 0400dc60d88e680f492dea3403f3543e94225051
+    '007': 69857f7b4c0a7dca118da1051c4353fb470f76fe
+    '008': 64f7e18a77a44567a6a73d64759879e3b9aa44bb
+    '009': 109a01461eec447438fd7bfc814c82d0e7ddf2de
+    '010': 2bee539fa4a2abfb000eca5e6f7115c294f38a31
+    '011': 815e06905752a26cd6dfc7daa00b031ba46e6394
+    '012': 6aad903ea6949e7c243c65fc7cfae26bf68b0bd0
+    '013': eb5089f5e52d7bbb095113e1a7bfd9daa4600fe9
+    '014': 413db0bd8937c684c8d8e2819045f1c905dde4ce
+    '015': 0c0a7e9121c0681647887b4d1f8b2992dce752f6
+    '016': 96f1d5a4339aaf96ae496123fe863221aea22322
+    '017': 8f0645b4ea518ad3ca56de239eee9b1a4181539a
+    '018': efe6979f1fe1384c32039d040fd2ae4dbce64680
+    '019': d601af4877f35051f4d82c51050b26da5f48bf1f
+    '020': 6427afc493c91949c2da7c2096367ffe7e5fbdbb
+    '021': 0e34e0b6a30e122e834e228e7454cae8977b5d7a
+    '022': 171e34165516051dd5fc0b50c2d20743b3e05103
+    '023': cd6b4259f5c5788dacec469bc5d465888dbb01d0
+    '024': 633bce96019b60d1c560e0b0d519eaaae82a6dbd
+    '025': 5d8394b7ed142fbf713b9aebeb34d5031845e457
+    '026': 8a848053eadfcf011ddd2d3e3eacbb23ee3a58f9
+    '027': 467b43e1462a6a296c3ab7acddd33f7038ca75f0
+    '028': cf9da9b4132a97df245b0965deb3c18e3e713c5d
+    '029': d78217eb5fde3227007cca9e878dedb3fe9b235e
+    '030': cbdf2c7da62646b500dd33e81687a669ed9235cd
+    '031': d8da395fd7a9a0b194f055abc44f6294d20d9c59
+    '032': 42f24265b695ce491785aa90f35a27fc31ba27b4
+    '033': 6847be5cd9f0ee0e0dd80a900d83c9a3b4d50944
+    '034': bf17eae50e89dcdba98f49626ed4bff807032d40
+    '035': 83d827ad8ecba01c01c665dd96ce54794ad1e1a3
+    '036': 07a6a3c5f11e6be82ef4c3b40b1b57af0820d713
+    '037': 7092448c87d6116deeeb612a5486cb807bbd8fea
+    '038': 06b723d0fccea0f5e0619f8f21279bf9dabf63e5
+  remote_verification:
+    initial_mismatches:
+    - '012'
+    - '021'
+    replacements_applied: true
+    final_expected_result: 38_of_38_git_blob_identities_match
+    reconstruction_gate: Base64_decode_then_bzip2_decompress_then_tar_member_SHA256_check
+review_artifacts:
+  cross_report_synthesis: target-projects/meta-agent/research/reviews/MA-DR-01-05-cross-report-synthesis-v0.1.md
+  gap_analysis: target-projects/meta-agent/research/reviews/MA-DR-01-05-gap-analysis-v0.1.md
+  owner_decision_package: target-projects/meta-agent/decision-support/Meta-Agent-v0.1-owner-disposition-decision-package.md
+  incident_record: notes/mnemosyne-maintenance-issues/META-AGENT-RESEARCH-EVIDENCE-INCIDENT-001.md
+  maintainer_intake: notes/mnemosyne-maintenance-issues/META-AGENT-RESEARCH-EVIDENCE-INCIDENT-001-maintainer-intake.md
+  authority: non_execution_source

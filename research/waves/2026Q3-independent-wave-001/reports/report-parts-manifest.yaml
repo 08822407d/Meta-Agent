@@ -1,0 +1,69 @@
+manifest_id: META-AGENT-INDEPENDENT-WAVE-REPORT-PARTS-MANIFEST-004
+artifact_role: exact_report_transport_identity_and_remote_reconstruction_record
+status: all_eight_reports_recorded_and_verified
+target_project_id: meta-agent
+target_truth_source: false
+last_updated_by_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
+repair_PR: 249
+repair_merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
+post_merge_finalization_PR: 251
+reconstruction_readme: reports/README.md
+verification:
+  MA_DR_08_10_15_remote_transport_components_verified: 56
+  MA_DR_08_10_15_remote_report_reconstruction: PASS_7_OF_7
+  MA_DR_09_transport_components_expected: 37
+  MA_DR_09_pre_merge_remote_component_verification: PASS_37_OF_37
+  MA_DR_09_pre_merge_remote_reconstruction: PASS
+  MA_DR_09_PR_head_to_merge_commit_changed_files: 0
+  MA_DR_09_merge_commit_to_master_changed_files: 0
+  normalization_performed: false
+report_identity_files:
+  - identities/MA-DR-08.yaml
+  - identities/MA-DR-10.yaml
+  - identities/MA-DR-11.yaml
+  - identities/MA-DR-12.yaml
+  - identities/MA-DR-13.yaml
+  - identities/MA-DR-14.yaml
+  - identities/MA-DR-15.yaml
+  - identities/MA-DR-09.yaml
+  - identities/MA-DR-09-post-merge-verification.yaml
+original_reports:
+  - research_id: MA-DR-08
+    original_bytes: 91398
+    original_sha256: 47a40275e858f6738b7190e21b749157cf3fab4f9f5607f9c848568958a38d53
+    remote_reconstruction_sha256_verified: true
+  - research_id: MA-DR-10
+    original_bytes: 73669
+    original_sha256: 662ba9fc3204c2ae5fc667ca8fcf47c2d385dcda63621bf38d0884558b4e0617
+    remote_reconstruction_sha256_verified: true
+  - research_id: MA-DR-11
+    original_bytes: 50819
+    original_sha256: 9e867066630e2d8a4ada30786d8e41763e616cf5e3abc44c4eedde358b405cd5
+    remote_reconstruction_sha256_verified: true
+  - research_id: MA-DR-12
+    original_bytes: 57629
+    original_sha256: 8cc81dad7e391dd5965c275b7e2593a01d00ed531dae6a9064ed2ad628d1ffd1
+    remote_reconstruction_sha256_verified: true
+  - research_id: MA-DR-13
+    original_bytes: 85216
+    original_sha256: e08ba4ccc8508de1c56530ef49b85b9b26cdc3f178791e337008f0e8a3924297
+    remote_reconstruction_sha256_verified: true
+  - research_id: MA-DR-14
+    original_bytes: 78569
+    original_sha256: 4e7779a040754ca9b7729ac89eba715e31b5291d07c6a6c3c5f1cedfdca9102c
+    remote_reconstruction_sha256_verified: true
+  - research_id: MA-DR-15
+    original_bytes: 74192
+    original_sha256: 6762e0146f1a923ffb569175c882f67efc3ab27c03c5bb3047c4e6bb016fc027
+    remote_reconstruction_sha256_verified: true
+  - research_id: MA-DR-09
+    original_bytes: 88451
+    original_sha256: f3a7debd08b3ff8edf89d2fb51492e03a25dfa43168a9014c9f7c1e4319912e9
+    transport: bzip2_level_9_then_Base64_37_parts
+    compressed_bytes: 27382
+    compressed_sha256: 3adfc7b750edcf9184ed487574690125158531206fb43d26d1b534d87a1a448a
+    remote_reconstruction_sha256_verified: true
+historical_failed_transport:
+  PR: 248
+  path: reports/MA-DR-09-report-parts-base64/
+  disposition: incomplete_noncanonical_removed_by_PR_249

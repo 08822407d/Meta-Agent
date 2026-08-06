@@ -1,0 +1,37 @@
+research_id: MA-DR-09
+artifact_role: post_merge_transport_and_handoff_verification
+target_truth_source: false
+repair_task: META-AGENT-PR248-HANDOFF-REPAIR-001
+repair_PR: 249
+repair_PR_head: d187a3ef8c1182f8587ce4e7baa85f2eae79bca7
+repair_merge_commit: a096c3ddc24a574f90bd47a76c10af92f8999680
+post_merge_finalization_task: META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001
+post_merge_finalization_PR: 251
+report_identity:
+  original_bytes: 88451
+  original_sha256: f3a7debd08b3ff8edf89d2fb51492e03a25dfa43168a9014c9f7c1e4319912e9
+  compressed_bytes: 27382
+  compressed_sha256: 3adfc7b750edcf9184ed487574690125158531206fb43d26d1b534d87a1a448a
+  transport_parts: 37
+verification:
+  pre_merge_remote_component_blob_identity: PASS_37_OF_37
+  pre_merge_remote_reconstruction: PASS
+  PR_head_to_merge_commit:
+    status: ahead_by_one_merge_commit
+    changed_files: 0
+    tree_identity_preserved: true
+  merge_commit_to_master:
+    status: identical
+    changed_files: 0
+  startup_prompt_on_master: PASS
+  handoff_package_on_master: PASS
+  compatibility_guard_on_master: PASS
+  formal_review_on_master: PASS
+  upstream_binding_addendum_on_master: PASS
+conclusion:
+  exact_transport_preserved_by_merge: true
+  handoff_files_present: true
+  navigation_required_post_merge_finalization: true
+limitations:
+  - Git identities prove bytes and tree preservation, not research factual correctness.
+  - Handoff becomes effective only after the post-merge finalization PR is merged and read back.

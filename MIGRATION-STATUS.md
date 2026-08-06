@@ -1,33 +1,28 @@
 # Meta-Agent Repository Migration Status
 
 ```yaml
-status: initialized_non_authoritative_codex_shadow_import_task_ready
+status: shadow_import_ready_for_review
 repository: 08822407d/Meta-Agent
+shadow_branch: meta-agent-shadow-migration-001
 source_snapshot:
   repository: 08822407d/Mnemosyne
   commit: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
   root: target-projects/meta-agent/
-  expected_file_or_blob_count: 226
-current_target_truth:
+  files: 226
+  byte_exact_files: 224
+  transformed_files: 2
+current_authoritative_target_truth:
   repository: 08822407d/Mnemosyne
   path: target-projects/meta-agent/current/approved-spec.md
+destination_candidate_target_truth:
+  path: current/approved-spec.md
+  authoritative: false
   effective_for_operational_use: false
-destination_target_truth_cutover: false
-destination_operational_activation: false
-shadow_import:
-  branch: meta-agent-shadow-migration-001
-  started: false
-  taskbook: migration-staging/meta-agent-shadow-import-codex-task-zh-cn.md
-  executable: migration-staging/import-from-mnemosyne.sh
+target_truth_cutover: false
+operational_activation: false
 initial_memory_system_foundation:
-  mixed_into_prior_preparation_work: true
-  imported_or_adopted_now: false
-  status: deferred_until_repository_migration_and_destination_only_recovery_complete
-  RAG: not_authorized
-  MCP: not_authorized
-  automation: not_authorized
+  status: deferred_until_after_migration
+  adopted: false
 ```
 
-This repository has been initialized only so that a bounded shadow-import branch and Draft PR can be created. Initialization is not a target-truth cutover and is not operational activation.
-
-The immediate objective is to run the repository-local Chinese Codex task, import the preserved 226-file Meta-Agent project tree, transform only current navigation and handoff, verify 224 byte-exact files, and stop for Owner review. Additional memory-system construction is intentionally deferred until after migration.
+The immediate task is review and mechanical verification of the shadow import. No memory foundation, RAG, MCP, automation, private-material support, prototype, pilot or operational activation is part of this migration pull request.
