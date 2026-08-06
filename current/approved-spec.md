@@ -7,8 +7,9 @@ authority_level: target_execution_source
 target_runtime_truth_source_designated: true
 target_runtime_truth_source_effective: false
 effective_for_operational_use: false
+target_truth_repository: 08822407d/Meta-Agent
 created_by_task: MNEMOSYNE-171
-last_updated_by_task: META-AGENT-OWNER-DISPOSITION-001
+last_updated_by_task: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
 design_version: 0.1.0
 schema_version: 0.1.0
 policy_version: 0.1.0
@@ -17,24 +18,26 @@ owner: user
 owner_disposition: ACCEPT_WITH_LIMITATIONS
 owner_disposition_recorded_at: 2026-07-31
 source_refs:
-  - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M0-requirements-and-authority-baseline.md
-  - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M1-workspace-safety-build-manifest.md
-  - notes/first-target-minimum-upgrade-contract-v0.1.md
-  - notes/first-target-minimum-upgrade-contract-advisory-pilot-checklist-v0.1.md
-  - target-projects/meta-agent/decision-support/Meta-Agent-v0.1-owner-disposition-decision-package.md
+  - 08822407d/Mnemosyne@8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb:notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M0-requirements-and-authority-baseline.md
+  - 08822407d/Mnemosyne@8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb:notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M1-workspace-safety-build-manifest.md
+  - 08822407d/Mnemosyne@8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb:notes/first-target-minimum-upgrade-contract-v0.1.md
+  - 08822407d/Mnemosyne@8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb:notes/first-target-minimum-upgrade-contract-advisory-pilot-checklist-v0.1.md
+  - decision-support/Meta-Agent-v0.1-owner-disposition-decision-package.md
+  - migration/source-snapshot-pointer.yaml
 known_limits:
   - accepted_as_inactive_design_and_governance_baseline_only
   - operational_activation_requires_separate_explicit_owner_decision
   - applicable_non_FABLE_health_review_findings_remain_pending_before_pilot_or_activation
   - this_file_does_not_authorize_private_material_or_automatic_writeback
   - pending_requirements_remain_pending
+  - repository_cutover_does_not_equal_operational_activation
 ---
 
 # Meta-Agent v0.1 Approved Spec — Owner-Accepted Inactive Baseline
 
 ## 1. Authority, Owner disposition and activation
 
-This file is the **designated sole Meta-Agent v0.1 runtime truth-source path**. The Owner has accepted its current requirements, initial method references and governance structure as an inactive design and governance baseline. It is **not** effective for operational use.
+This file at `08822407d/Meta-Agent/current/approved-spec.md` is the **designated sole Meta-Agent v0.1 target-truth path** after `META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001` reaches `master`. The Owner has accepted its current requirements, initial method references and governance structure as an inactive design and governance baseline. It is **not** effective for operational use.
 
 ```yaml
 owner_disposition:
@@ -61,7 +64,10 @@ owner_disposition:
 
 ```yaml
 activation:
-  designated_truth_source_path: target-projects/meta-agent/current/approved-spec.md
+  target_truth_repository: 08822407d/Meta-Agent
+  designated_truth_source_path: current/approved-spec.md
+  repository_cutover_task: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
+  repository_cutover_effective_condition: this_cutover_change_is_present_on_master
   owner: user
   current_status: owner_accepted_v0_1_inactive_design_and_governance_baseline
   effective_for_operational_use: false
@@ -73,9 +79,12 @@ activation:
     - exact_operational_or_bounded_pilot_scope_and_acceptance_stop_rollback_criteria
   no_implicit_activation_from_owner_baseline_acceptance: true
   no_implicit_activation_from_file_or_PR_merge: true
+  no_implicit_activation_from_repository_cutover: true
 ```
 
-The Owner disposition makes this file the accepted repository-backed design and governance baseline within the stated limitations. It does not authorize execution, private material, a pilot, broad writes, advanced automation or a production claim. Mnemosyne's `current/human-approved-spec.md` governs Mnemosyne process and safety only; it is not Meta-Agent runtime truth.
+The Owner disposition makes this file the accepted repository-backed design and governance baseline within the stated limitations. It does not authorize execution, private material, a pilot, broad writes, advanced automation or a production claim.
+
+The former Mnemosyne path at `08822407d/Mnemosyne@8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb:target-projects/meta-agent/current/approved-spec.md` is retained only as an immutable historical bootstrap and rollback snapshot. Mnemosyne maintenance guidance and `current/human-approved-spec.md` do not govern Meta-Agent product truth or current work after cutover.
 
 ## 2. Identity, purpose and scope
 
@@ -111,6 +120,10 @@ The following requirement IDs are Owner-accepted target requirements for the cur
 | `MA-REQ-0014` | Meta-Agent has exactly one declared runtime truth source; Mnemosyne is design archive/control plane, not a second runtime truth source. |
 | `MA-REQ-0015` | A fresh qualified session can resume from target truth, current context and handoff without hidden prior-conversation assumptions. |
 | `MA-REQ-0016` | Important methodology changes require evidence, acceptance criteria, issue/postmortem records where relevant and regression or semantic review proportionate to impact. |
+
+### Repository-cutover interpretation of MA-REQ-0014
+
+The requirement text remains unchanged. Its controlling invariant is that Meta-Agent has exactly one declared target truth. After the dedicated-repository cutover, the former Mnemosyne “design archive/control plane” wording is limited to historical bootstrap, migration-evidence and rollback context; it creates no live product-control authority and no second writer. The sole current target truth is `08822407d/Meta-Agent/current/approved-spec.md`.
 
 ## 4. v0.1 non-goals and accepted limitations
 
@@ -149,23 +162,23 @@ accepted_limitations:
 
 ```yaml
 target_file_roles:
-  target-projects/meta-agent/current/approved-spec.md:
+  current/approved-spec.md:
     role: sole_target_execution_source_after_separate_activation
-  target-projects/meta-agent/current/active-context.md:
+  current/active-context.md:
     role: non_execution_current_state_and_safe_next_action
-  target-projects/meta-agent/authority/source-and-owner-map.md:
+  authority/source-and-owner-map.md:
     role: owner_source_priority_material_and_write_authority_support
-  target-projects/meta-agent/methodology/core-methodology.md:
+  methodology/core-methodology.md:
     role: initial_incomplete_method_library_accepted_only_as_referenced_here
-  target-projects/meta-agent/cases/case-and-feedback-ledger.md:
+  cases/case-and-feedback-ledger.md:
     role: evidence_candidate_and_feedback_only
-  target-projects/meta-agent/history/decision-version-and-migration-log.md:
+  history/decision-version-and-migration-log.md:
     role: reviewed_history_lineage_migration_and_rollback
-  target-projects/meta-agent/handoff/handoff-current.md:
+  handoff/handoff-current.md:
     role: non_execution_fresh_session_navigation
 ```
 
-No file acquires authority merely because it is newer, longer, or placed under `current/`.
+No file acquires authority merely because it is newer, longer, or placed under `current/`. The repository root is not itself the truth source.
 
 ## 6. Conflict precedence
 
@@ -178,6 +191,7 @@ conflict_precedence:
   - methodology_objects_referenced_by_this_spec
   - active_context_and_handoff_for_navigation_only
   - reviewed_evidence_and_research
+  - pinned_historical_bootstrap_and_rollback_evidence
   - model_inference_marked_as_inference
 ```
 
@@ -195,7 +209,7 @@ methodology_refs:
   - MA-METHOD-0004
   - MA-METHOD-0005
   - MA-METHOD-0006
-methodology_file: target-projects/meta-agent/methodology/core-methodology.md
+methodology_file: methodology/core-methodology.md
 methodology_status: owner_accepted_as_initial_incomplete_library
 ```
 
@@ -222,7 +236,7 @@ Prohibited:
 
 ## 9. Safe input and repository-write boundary
 
-Allowed in the public bootstrap workspace only after applicable preflight:
+Allowed in the public repository only after applicable preflight:
 
 - public information;
 - synthetic material;
@@ -243,6 +257,8 @@ Prohibited:
 ```yaml
 repository_write_rule:
   platform_permission_is_not_task_authorization: true
+  authoritative_Meta_Agent_repository: 08822407d/Meta-Agent
+  historical_Mnemosyne_target_root_live_writes_prohibited: true
   every_repository_or_target_write_requires:
     - task_id
     - actor_and_surface
@@ -297,6 +313,16 @@ owner_disposition_version_effect:
   version_change: none
   rationale: status_and_owner_acceptance_record_only_no_requirement_method_schema_policy_or_delivery_semantics_changed
 
+repository_cutover_version_effect:
+  task_id: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
+  version_change: none
+  rationale: repository_and_path_authority_location_changed_without_changing_requirement_method_schema_policy_or_operational_semantics
+  old_repository: 08822407d/Mnemosyne
+  old_path: target-projects/meta-agent/current/approved-spec.md
+  new_repository: 08822407d/Meta-Agent
+  new_path: current/approved-spec.md
+  operational_activation: false
+
 upgrade_contract:
   contract_id: META-AGENT-V0.1-UPGRADE-CONTRACT-001
   profile: standard
@@ -334,9 +360,12 @@ Stable IDs are never reused. Rename, split, merge, replacement and retirement re
 operational_acceptance:
   baseline_disposition: ACCEPT_WITH_LIMITATIONS
   baseline_accepted: true
+  repository_cutover_completed_when_this_change_is_on_master: true
+  target_truth_repository: 08822407d/Meta-Agent
+  target_truth_path: current/approved-spec.md
   target_truth_effective_for_operational_use: false
   operational_activation_authorized: false
-  merge_of_this_recording_PR_alone: records_owner_decision_but_does_not_authorize_operation
+  merge_of_cutover_PR_alone: changes_repository_and_path_authority_but_does_not_authorize_operation
   next_activation_or_pilot_decision_requires:
     - separate_explicit_owner_authorization
     - applicable_non_FABLE_health_review_findings_checked_or_explicitly_deferred
@@ -345,6 +374,7 @@ operational_acceptance:
     - latest_context_and_handoff_review
   prohibited_implicit_transitions:
     - baseline_acceptance_to_operational_activation
+    - repository_cutover_to_operational_activation
     - research_recommendation_to_methodology_change
     - repository_permission_to_task_authority
 ```

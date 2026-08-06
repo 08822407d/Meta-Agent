@@ -2,21 +2,23 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-SOURCE-OWNER-MAP-001
 artifact_role: source_and_owner_authority_map
-status: owner_accepted_v0_1_inactive_support_record
+status: owner_accepted_v0_1_inactive_support_record_after_repository_cutover
 authority_level: owner_accepted_support_record
 target_runtime_truth_source: false
 created_by_task: MNEMOSYNE-171
-last_updated_by_task: META-AGENT-SUPPORT-METADATA-SYNC-001
+last_updated_by_task: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
 policy_version: 0.1.0
 source_refs:
-  - target-projects/meta-agent/current/approved-spec.md
-  - target-projects/meta-agent/history/decision-version-and-migration-log.md
-  - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M0-requirements-and-authority-baseline.md
-  - notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M1-workspace-safety-build-manifest.md
+  - current/approved-spec.md
+  - history/decision-version-and-migration-log.md
+  - migration/source-snapshot-pointer.yaml
+  - 08822407d/Mnemosyne@8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb:notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M0-requirements-and-authority-baseline.md
+  - 08822407d/Mnemosyne@8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb:notes/first-target-project-intake-records/meta-agent/meta-agent-v0.1-M1-workspace-safety-build-manifest.md
 known_limits:
   - does_not_grant_permission_by_itself
   - platform_permission_is_not_task_authorization
   - target_truth_remains_inactive_for_operational_use
+  - Meta_Agent_owned_behavior_guidance_not_yet_adopted
 ---
 
 # Meta-Agent Source and Owner Map v0.1
@@ -41,21 +43,38 @@ No Agent, model, research report, repository path or tool permission can replace
 
 ```yaml
 runtime_truth:
-  designated_path: target-projects/meta-agent/current/approved-spec.md
+  repository: 08822407d/Meta-Agent
+  branch: master
+  designated_path: current/approved-spec.md
+  authoritative: true
+  active_writer: true
   current_effect: owner_accepted_inactive_design_and_governance_baseline_not_effective_for_operational_use
-  entire_directory_is_truth_source: false
+  entire_repository_is_truth_source: false
+  entire_current_directory_is_truth_source: false
 
-Mnemosyne:
+previous_Mnemosyne_bootstrap_source:
   repository: 08822407d/Mnemosyne
+  pinned_commit: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
+  previous_path: target-projects/meta-agent/current/approved-spec.md
   role:
-    - design_archive
-    - control_plane
-    - bootstrap_host
+    - immutable_historical_bootstrap_snapshot
+    - rollback_source
+    - migration_evidence_reference
   target_runtime_truth: false
-  root_execution_source_scope: Mnemosyne_process_and_safety_only
+  active_writer: false
+  Meta_Agent_writes_prohibited: true
+  Mnemosyne_maintenance_authority_over_Meta_Agent: false
+
+cutover:
+  task_id: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
+  owner_decision: APPROVE_DEDICATED_REPOSITORY_TARGET_TRUTH_CUTOVER
+  effective_condition: this_cutover_change_is_present_on_master
+  operational_activation: false
 ```
 
-The designated spec is the sole Meta-Agent runtime truth-source path. The Owner has accepted it as the current design and governance baseline with limitations, but it remains inactive for operational use. Other files provide methods, evidence, current state, history or navigation only.
+`08822407d/Meta-Agent/current/approved-spec.md` is the sole Meta-Agent target-truth path after the cutover change reaches `master`. The Owner has accepted its requirements and governance baseline with limitations, but it remains inactive for operational use. Other files provide methods, evidence, current state, history, migration support or navigation only.
+
+The Mnemosyne snapshot is retained for historical provenance and rollback. It is not a second truth source, a live writer, a product control plane, or authority for current Meta-Agent work.
 
 ## 3. Source classes
 
@@ -69,6 +88,7 @@ The designated spec is the sole Meta-Agent runtime truth-source path. The Owner 
 | `handoff` | `handoff/handoff-current.md` | Fresh-session navigation only. |
 | `case_or_feedback_evidence` | `MA-CASE-*`, `MA-FEEDBACK-*` | Scoped evidence/candidate input; no automatic methodology promotion. |
 | `research_evidence` | reviewed reports and evidence ledgers | Supports decisions; never target truth by itself. |
+| `historical_bootstrap_or_rollback_evidence` | pinned Mnemosyne snapshot and migration records | Provenance and rollback only; cannot override current target truth. |
 | `raw_or_external_evidence` | public, redacted, pointer or outside-Git material | Historical evidence subject to safety and authority review. |
 | `model_inference` | analysis not confirmed by user/evidence | Low authority; must be labeled and revisable. |
 | `platform_or_tool_fact` | official current documentation or observed surface state | Time-sensitive evidence; requires freshness checks. |
@@ -85,6 +105,7 @@ source_priority:
   - approved_methodology_referenced_by_spec
   - current_state_and_handoff_for_navigation_only
   - reviewed_case_feedback_and_research_evidence
+  - pinned_historical_bootstrap_and_rollback_evidence
   - model_inference
 
 conflict_rule:
@@ -99,7 +120,7 @@ conflict_rule:
     - methodology_promotion
 ```
 
-A newer artifact is not automatically more authoritative.
+A newer artifact is not automatically more authoritative. A historical source does not regain authority because it contains the original wording or an older path.
 
 ## 5. Allowed material classes
 
@@ -119,7 +140,7 @@ The default route for private or large originals is `outside_git`.
 ## 6. Prohibited material classes
 
 ```yaml
-prohibited_in_public_bootstrap_Git:
+prohibited_in_public_Git:
   - secrets
   - credentials
   - tokens_or_account_material
@@ -157,9 +178,10 @@ Rules:
 
 1. App connection, persistent permission, approval card or repository access does not authorize the current action.
 2. Read authorization does not imply write authorization.
-3. Mnemosyne write authorization does not imply target-repository or runtime-store write authorization.
-4. One task's authorization is not precedent for a later task.
-5. Ambiguous path or authority scope is a stop condition.
+3. Authorization for `08822407d/Meta-Agent` does not imply authorization for `08822407d/Mnemosyne`, and the reverse is also true.
+4. After cutover, new Meta-Agent target-truth, current-state and handoff writes belong only in `08822407d/Meta-Agent` unless the Owner explicitly authorizes a rollback.
+5. One task's authorization is not precedent for a later task.
+6. Ambiguous path or authority scope is a stop condition.
 
 ## 8. Write and promotion authority by object
 
@@ -172,7 +194,7 @@ Rules:
 | methodology promotion | reviewer/Agent candidate | user confirmation and policy/version update |
 | private material use | user | explicit material and storage approval |
 | operational activation | user | separate explicit Owner activation decision after applicable blockers, exact scope and acceptance/stop/rollback gates are addressed |
-| migration | Agent/user proposal | approved `MA-MIG-*`, validation and rollback |
+| migration or rollback | Agent/user proposal | approved `MA-MIG-*`, validation, no-dual-writer check and rollback plan |
 
 ## 9. Evidence, support, candidate and inference labeling
 
@@ -187,10 +209,10 @@ role_labels:
   inference:
     meaning: model_generated_interpretation_with_uncertainty
   approved_target_truth:
-    meaning: only_content_accepted_in_the_designated_runtime_truth_source
+    meaning: only_content_accepted_in_the_designated_target_truth_source
 ```
 
-A role change requires an explicit decision; it cannot be implied by moving a file.
+A role change requires an explicit decision; it cannot be implied by moving or copying a file.
 
 ## 10. Freshness and external facts
 
@@ -207,6 +229,6 @@ This map is reviewed whenever:
 - repository visibility or storage policy changes;
 - a new material class is introduced;
 - cross-Agent sharing or private storage is proposed;
-- migration to an external repository is considered.
+- a migration, rollback or new authoritative repository is considered.
 
-Changes require versioning, source review and an owner decision.
+`META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001` supersedes the prior live repository/path designation while preserving the v0.1 requirements, methodology references, inactive operational status and Owner authority. Further changes require versioning or an explicit no-version-change rationale, source review and an Owner decision.

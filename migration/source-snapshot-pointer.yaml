@@ -1,26 +1,58 @@
 record_id: META-AGENT-DEDICATED-REPOSITORY-SOURCE-SNAPSHOT-001
-artifact_role: migration_source_identity_and_scope_pointer
+artifact_role: migration_source_identity_historical_bootstrap_and_rollback_pointer
 target_truth_source: false
 source:
   repository: 08822407d/Mnemosyne
   commit: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
   root: target-projects/meta-agent/
+  target_truth_path_at_snapshot: target-projects/meta-agent/current/approved-spec.md
   root_subtree_sha: 4c1cd341777d46b3d6794abc62682e9c915ec46a
   file_or_blob_count: 226
+  post_cutover_role: immutable_historical_bootstrap_and_rollback_snapshot
+  authoritative: false
+  active_writer: false
+  Meta_Agent_writes_prohibited: true
 mapping:
   rule: strip_target-projects/meta-agent_prefix
+  destination_repository: 08822407d/Meta-Agent
+  destination_branch: master
+  destination_target_truth_path: current/approved-spec.md
   byte_exact_files: 224
   transformed_live_navigation:
     - current/active-context.md
     - handoff/handoff-current.md
-excluded_from_this_import:
+excluded_from_import:
   - PR_258_source_inventory_generator_and_control_manifests_added_after_the_frozen_snapshot
   - Mnemosyne_root_taskbooks_adjudications_and_task_result_records_outside_the_source_root
   - meta-agent-dedicated-repository-mapping-resume-001_unmerged_branch_artifacts
   - Mnemosyne_initial_memory_system_candidate_and_alignment_work
+verification:
+  source_copy_result: PASS
+  destination_only_recovery_first_run: PASS_WITH_STALE_POST_MERGE_NAVIGATION
+  destination_only_recovery_rerun: PASS
+  rerun_evaluated_master: d3d4c770fbef851f2d094122b22bfcb539e7a8da
+  repository_T5_gate: PASS
+cutover:
+  task_id: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
+  owner_decision: APPROVE_DEDICATED_REPOSITORY_TARGET_TRUTH_CUTOVER
+  effective_condition: this_cutover_change_is_present_on_master
+  target_truth_repository: 08822407d/Meta-Agent
+  target_truth_path: current/approved-spec.md
+  target_truth_cutover: true
+  operational_activation: false
+no_dual_writer:
+  sole_authoritative_repository: 08822407d/Meta-Agent
+  sole_active_writer_repository: 08822407d/Meta-Agent
+  historical_source_writes_prohibited: true
+rollback:
+  trigger:
+    - post_cutover_recovery_failure
+    - conflicting_authority_or_dual_writer_detected
+  source_snapshot: 08822407d/Mnemosyne@8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb:target-projects/meta-agent/
+  action:
+    - revert_the_cutover_change_in_08822407d_Meta_Agent
+    - restore_the_pinned_source_snapshot_as_authoritative_only_by_separate_explicit_Owner_decision
+  operational_side_effect_rollback_required: false
 memory_foundation:
   adopted: false
-  deferred_until: migration_complete_and_destination_only_recovery_passes
-cutover:
-  authorized: false
-  operational_activation: false
+  deferred_until: migration_closeout_and_separate_Owner_review

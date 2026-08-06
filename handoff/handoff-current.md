@@ -2,42 +2,48 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-HANDOFF-001
 artifact_role: fresh_session_handoff
-status: post_merge_navigation_synchronized_recovery_rerun_pending
+status: dedicated_repository_authoritative_inactive_post_cutover_verification_pending
 authority_level: non_execution_navigation
 target_runtime_truth_source: false
-last_updated_by_task: META-AGENT-POST-MERGE-NAVIGATION-CORRECTION-001
+last_updated_by_task: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
 ---
 
-# Meta-Agent Handoff — Post-Merge Recovery Rerun Pending
+# Meta-Agent Handoff — Dedicated Repository Authoritative, Operationally Inactive
 
 ## Authority boundary
 
-The Meta-Agent project files are now present on the dedicated repository `master`, but the sole active target truth remains in Mnemosyne until a separate explicit Owner cutover:
-
-```text
-08822407d/Mnemosyne@8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
-target-projects/meta-agent/current/approved-spec.md
-```
-
-The dedicated-repository candidate is:
+When `META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001` is present on `master`, the sole Meta-Agent target truth is:
 
 ```text
 08822407d/Meta-Agent
 current/approved-spec.md
 ```
 
-The destination remains non-authoritative and operationally inactive.
+The previous bootstrap source is pinned only as historical and rollback evidence:
 
-## Verified migration facts
+```text
+08822407d/Mnemosyne@8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
+target-projects/meta-agent/current/approved-spec.md
+```
+
+It is no longer authoritative, is not an active writer, and must not receive new Meta-Agent live-state writes unless the Owner explicitly authorizes a rollback.
+
+The repository cutover does not make the approved spec effective for operational use.
+
+## Verified migration and recovery facts
 
 ```yaml
 route: META_AGENT_PRODUCT_BUILD
+owner: user
+owner_disposition: ACCEPT_WITH_LIMITATIONS
 
-PR_1:
+PR_1_shadow_import:
   merged: true
-  head_commit: 1e18dfb341d9371171cf8c8ac44064d02e6030cc
   merge_commit: 322d4d437c4df79e17de1ad7137edf0f7ad76f34
-  merge_tree_preserved: true
+
+PR_2_navigation_correction:
+  merged: true
+  merge_commit: d3d4c770fbef851f2d094122b22bfcb539e7a8da
 
 source_snapshot:
   repository: 08822407d/Mnemosyne
@@ -54,19 +60,23 @@ copy_verification:
   missing_files: 0
   result: PASS
 
-destination_only_recovery_first_run:
-  task_id: META-AGENT-DESTINATION-ONLY-FRESH-SESSION-RECOVERY-001
-  receiver_capability: PASS
-  result: PASS_WITH_STALE_POST_MERGE_NAVIGATION
-  demonstrated_defect: previous_live_navigation_still_required_review_of_already_merged_PR_1
-  correction_task: META-AGENT-POST-MERGE-NAVIGATION-CORRECTION-001
-  rerun_required: true
+destination_only_recovery:
+  first_run_result: PASS_WITH_STALE_POST_MERGE_NAVIGATION
+  rerun_task: META-AGENT-DESTINATION-ONLY-FRESH-SESSION-RECOVERY-RERUN-001
+  rerun_evaluated_master: d3d4c770fbef851f2d094122b22bfcb539e7a8da
+  rerun_result: PASS
+  repository_T5_gate: PASS
+  authority_recovery: PASS
+  safe_next_action_recovery: PASS
 
-authority:
-  source_authoritative: true
-  destination_authoritative: false
-  destination_active_writer: false
-  target_truth_cutover: false
+cutover:
+  task_id: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
+  owner_decision: APPROVE_DEDICATED_REPOSITORY_TARGET_TRUTH_CUTOVER
+  effective_condition: this_cutover_change_is_present_on_master
+  target_truth_repository: 08822407d/Meta-Agent
+  target_truth_path: current/approved-spec.md
+  destination_authoritative: true
+  destination_active_writer: true
   effective_for_operational_use: false
   operational_activation: false
 
@@ -80,34 +90,58 @@ prototype_or_pilot_authorized: false
 
 ## Required reading order
 
-1. `MIGRATION-STATUS.md` — execution-time migration phase and recovery status;
-2. `current/approved-spec.md` — preserved target-truth candidate, still inactive;
-3. `authority/source-and-owner-map.md` — Owner and authority classes;
-4. `current/active-context.md` — current phase, completed and pending work;
-5. `handoff/handoff-current.md` — this recovery navigation;
-6. `history/decision-version-and-migration-log.md` — historical decisions; stale historical next-gate text is not current state;
-7. `methodology/core-methodology.md`;
-8. `cases/case-and-feedback-ledger.md`;
-9. `migration/source-snapshot-pointer.yaml`;
-10. `migration/source-copy-verification.yaml`;
-11. `research/README.md` and only the research manifests or formal reviews required by the current task.
+1. `README.md` — repository identity and cutover boundary;
+2. `MIGRATION-STATUS.md` — migration evidence and current verification state;
+3. `current/approved-spec.md` — sole target truth, still operationally inactive;
+4. `authority/source-and-owner-map.md` — Owner, source priority, material and write authority;
+5. `current/active-context.md` — current phase, completed, pending and deferred work;
+6. `handoff/handoff-current.md` — this non-execution navigation;
+7. `history/decision-version-and-migration-log.md` — decisions, migration lineage and rollback;
+8. `methodology/core-methodology.md`;
+9. `cases/case-and-feedback-ledger.md`;
+10. `migration/source-snapshot-pointer.yaml`;
+11. `migration/source-copy-verification.yaml`;
+12. `research/README.md` and only the research manifests or formal reviews required by the current task.
 
-The copied `current/meta-agent-mnemosyne-guidance-compatibility-guard.md` remains temporary process/safety evidence only. It must not import Mnemosyne maintenance state. Meta-Agent-owned behavior guidance and the initial memory-system foundation remain deferred and are not adopted by this correction.
+Historical `target-projects/meta-agent/...` paths inside preserved evidence or old decisions do not override the current repository/path designation. `current/meta-agent-mnemosyne-guidance-compatibility-guard.md` is retired historical evidence and must not be loaded as active guidance.
 
-## Supersession
+## Current state
 
-This handoff supersedes the pre-merge instructions to review the shadow PR. PR #1 has already merged. The first destination-only recovery successfully reconstructed the project but correctly failed the freshness gate because the previous navigation had not recorded that merge.
+```yaml
+completed:
+  - source_snapshot_preserved
+  - destination_shadow_import_merged
+  - post_merge_navigation_defect_corrected
+  - destination_only_recovery_rerun_passed
+  - Owner_cutover_decision_recorded_in_this_change
+
+pending:
+  - read_only_post_cutover_destination_recovery
+  - no_dual_writer_and_Mnemosyne_source_freeze_verification
+  - migration_closeout
+  - separate_Meta_Agent_owned_behavior_guidance_review
+
+deferred:
+  - initial_memory_system_foundation
+  - RAG
+  - MCP
+  - automation
+  - private_material
+  - prototype
+  - benchmark
+  - pilot
+  - operational_activation
+```
 
 ## Exactly one safe next action
 
 ```yaml
-safe_next_action: run_a_read_only_destination_only_fresh_session_recovery_after_this_navigation_correction_reaches_master
+safe_next_action: perform_read_only_post_cutover_destination_recovery_and_no_dual_writer_verification
 success_path:
-  - confirm_current_phase_and_safe_next_action_are_recovered_without_Mnemosyne
-  - return_the_result_to_the_Owner
-  - prepare_a_separate_explicit_cutover_decision_if_the_rerun_passes
+  - confirm_fresh_session_recovers_Meta_Agent_current_approved_spec_as_sole_truth
+  - confirm_Mnemosyne_snapshot_is_historical_and_not_a_live_writer
+  - return_result_to_Owner_for_migration_closeout
 prohibited_in_same_step:
-  - target_truth_cutover
   - operational_activation
   - initial_memory_system_foundation
   - RAG
