@@ -1,0 +1,14 @@
+verification_id: META-AGENT-DEDICATED-REPOSITORY-SOURCE-COPY-VERIFICATION-001
+source_repository: 08822407d/Mnemosyne
+source_commit: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
+source_root: target-projects/meta-agent/
+source_subtree_sha: 4c1cd341777d46b3d6794abc62682e9c915ec46a
+source_file_count: 226
+mapping_rule: strip_source_root_prefix
+byte_exact_expected: 224
+transformed_paths:
+  - current/active-context.md
+  - handoff/handoff-current.md
+byte_exact_verified: 224
+missing_files: 0
+result_before_commit: PASS

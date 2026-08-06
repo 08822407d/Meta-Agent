@@ -1,0 +1,72 @@
+{
+  "package_id": "META-AGENT-INDEPENDENT-RESEARCH-WAVE-001",
+  "artifact_role": "independent_research_wave_manifest",
+  "status": "all_reports_recorded_adjudicated_and_receive_only_handoff_ready",
+  "target_project_id": "meta-agent",
+  "target_truth_source": false,
+  "repository": "08822407d/Mnemosyne",
+  "repair": {
+    "task_id": "META-AGENT-PR248-HANDOFF-REPAIR-001",
+    "branch": "meta-agent-pr248-handoff-repair-001",
+    "pull_request": 249,
+    "merge_commit": "a096c3ddc24a574f90bd47a76c10af92f8999680",
+    "base": "master@a576c7ad3f81c3dcfabe76eda938419eaaf46d80",
+    "merged": true
+  },
+  "post_merge_finalization": {
+    "task_id": "META-AGENT-PR249-POST-MERGE-HANDOFF-FINALIZATION-001",
+    "branch": "meta-agent-pr249-post-merge-handoff-finalization-001",
+    "pull_request": 251,
+    "merge_commit": "7c5d933c6691c2c951c5147c22ecdaf08ddfdf6f",
+    "base": "master@a096c3ddc24a574f90bd47a76c10af92f8999680",
+    "merged": true
+  },
+  "handoff_closure": {
+    "task_id": "META-AGENT-POST-RESEARCH-HANDOFF-CLOSURE-001",
+    "readiness_model": "ready_when_this_manifest_is_visible_on_latest_master_and_no_related_open_PR_exists",
+    "self_referential_pending_merge_marker": false
+  },
+  "PR_248_incident": {
+    "merged": true,
+    "scope_incomplete": true,
+    "historical_transport": "removed_by_PR_249",
+    "assessment": "decisions/PR248-scope-mismatch-assessment.md"
+  },
+  "reports": {
+    "MA_DR_08_10_15_exact_and_adjudicated": true,
+    "MA_DR_09_received": true,
+    "MA_DR_09_canonical_transport": "reports/MA-DR-09-report-bz2-base64/",
+    "MA_DR_09_identity": "reports/identities/MA-DR-09.yaml",
+    "MA_DR_09_post_merge_verification": "reports/identities/MA-DR-09-post-merge-verification.yaml",
+    "MA_DR_09_final_disposition": "ACCEPT_WITH_CORRECTIONS_AS_NON_EXECUTION_SOURCE_EVIDENCE"
+  },
+  "handoff": {
+    "package": "../../../../handoff/meta-agent-post-ma-dr-09-handoff-package.md",
+    "startup_prompt": "../../../../handoff/meta-agent-post-ma-dr-09-next-conversation-startup-prompt.md",
+    "status": "READY_FOR_RECEIVE_ONLY_HANDOFF",
+    "runtime_reverification": [
+      "latest_master_contains_ready_status",
+      "no_related_open_PR",
+      "startup_prompt_handoff_and_guard_are_readable"
+    ]
+  },
+  "conversation_archive_eligibility": {
+    "MA_DR_08": "now",
+    "MA_DR_09": "now",
+    "MA_DR_10": "now",
+    "MA_DR_11": "now",
+    "MA_DR_12": "now",
+    "MA_DR_13": "now",
+    "MA_DR_14": "now",
+    "MA_DR_15": "now"
+  },
+  "boundaries": {
+    "target_truth_modified": false,
+    "methodology_modified": false,
+    "stable_target_ids_issued": false,
+    "private_material_authorized": false,
+    "pilot_authorized": false,
+    "operational_activation_performed": false,
+    "Mnemosyne_maintenance_route_modified": false
+  }
+}

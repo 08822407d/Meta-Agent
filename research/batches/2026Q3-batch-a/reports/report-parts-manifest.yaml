@@ -1,0 +1,62 @@
+manifest_id: META-AGENT-BATCH-A-REPORT-PARTS-MANIFEST-001
+artifact_role: exact_report_parts_identity_and_reconstruction_manifest
+status: repository_recording_pending_human_merge
+target_project_id: meta-agent
+target_truth_source: false
+reports:
+  MA-DR-06:
+    original_filename: MA-DR-06-report.md
+    original_bytes: 52711
+    original_sha256: a02278ae871a2cf5b7716df52b0b8f4631dc2557d265ab8846af379349cc1452
+    part_count: 6
+    parts:
+    - path: MA-DR-06-report-parts/MA-DR-06-report.part-001-of-006.md
+      bytes: 9950
+      sha256: b20b89f635c1a17282a5ed210d8dd13bee49203b36f6ea23d0cead9478e6e9bc
+    - path: MA-DR-06-report-parts/MA-DR-06-report.part-002-of-006.md
+      bytes: 9981
+      sha256: 55a220e4f5d9fa02b4fe0ac5e8500fc8da65508afec08663e19bfe4c6ea07201
+    - path: MA-DR-06-report-parts/MA-DR-06-report.part-003-of-006.md
+      bytes: 9632
+      sha256: 44fbe5ffa3432aa437524685656d26045c4233c75a482b3848886c3b0c27212e
+    - path: MA-DR-06-report-parts/MA-DR-06-report.part-004-of-006.md
+      bytes: 9892
+      sha256: 632553ab6143a982297359768f6e69006bca0c250da5b2c12b6c6f6fef816ac6
+    - path: MA-DR-06-report-parts/MA-DR-06-report.part-005-of-006.md
+      bytes: 9870
+      sha256: bf5dcf0ed72419fe8885a46c4e1822b3805777f1616052e67286d63b113df590
+    - path: MA-DR-06-report-parts/MA-DR-06-report.part-006-of-006.md
+      bytes: 3386
+      sha256: 4ede26cab985ea8f3a554b9845bcd1aa584469a290c266b4052e91854ee472c7
+    reconstruction: concatenate_parts_in_lexical_filename_order_without_separator
+  MA-DR-07:
+    original_filename: MA-DR-07-report.md
+    original_bytes: 72539
+    original_sha256: 264ac917af37ce77e605790bb8dbe2ef2ad25a65d418c9475af11c9519f794a0
+    part_count: 8
+    parts:
+    - path: MA-DR-07-report-parts/MA-DR-07-report.part-001-of-008.md
+      bytes: 9891
+      sha256: b8912567c85f49eacc6fc1b7751e3bb9277363bbea33763c1b3e06b51485c749
+    - path: MA-DR-07-report-parts/MA-DR-07-report.part-002-of-008.md
+      bytes: 9883
+      sha256: 186c4dd6742d9ef405f34f9fc60a4a1febc4aaa04d81364726bb82fea310956e
+    - path: MA-DR-07-report-parts/MA-DR-07-report.part-003-of-008.md
+      bytes: 9883
+      sha256: 67429227fd21a309db93b630c3642c6395b97f313bc726e107637c004031c9e1
+    - path: MA-DR-07-report-parts/MA-DR-07-report.part-004-of-008.md
+      bytes: 9928
+      sha256: 7f4d8c3a4427a6d1e7f83aedf2156c75417788beab0fb28dd58d5366df97c3b8
+    - path: MA-DR-07-report-parts/MA-DR-07-report.part-005-of-008.md
+      bytes: 9976
+      sha256: f38913d786073f1b68c5bb2cd253a82f4022d4bff7397c1fc96320979dfb26ee
+    - path: MA-DR-07-report-parts/MA-DR-07-report.part-006-of-008.md
+      bytes: 9914
+      sha256: 8e78a6743a7d0b29a9862cab703f59d1635bffd0d278250da9b24c1fd205e0f7
+    - path: MA-DR-07-report-parts/MA-DR-07-report.part-007-of-008.md
+      bytes: 9974
+      sha256: fb0e9af9812ac4b1dab4370c214fdfa0aea30a112bfb51c56758e9ca384fd0e6
+    - path: MA-DR-07-report-parts/MA-DR-07-report.part-008-of-008.md
+      bytes: 3090
+      sha256: 2a66b29356e46a78fa4e0c7bec1f1ae4a9d7e248ec29dfdfb99918662132bb8d
+    reconstruction: concatenate_parts_in_lexical_filename_order_without_separator

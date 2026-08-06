@@ -1,0 +1,57 @@
+research_id: MA-DR-08
+artifact_role: exact_report_transport_identity
+target_truth_source: false
+original_bytes: 91398
+original_lines: 1514
+original_sha256: 47a40275e858f6738b7190e21b749157cf3fab4f9f5607f9c848568958a38d53
+reconstruction: concatenate_plain_utf8_parts
+parts:
+- path: target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/reports/MA-DR-08-report-parts/part-001.md
+  transport: plain_utf8
+  bytes: 11787
+  sha256: 08a6600a09f6f04da77e3048be4d5262adcb2c1cab947cc77eff9a02447d9831
+  git_blob_sha1: 59a1b57a5ce78c1bb2b49dee2f5da210b974c19b
+  remote_blob_verified: true
+- path: target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/reports/MA-DR-08-report-parts/part-002.md
+  transport: plain_utf8
+  bytes: 11991
+  sha256: 9672b0b4bb8c67ce7df529baa366bcd4931823af5599559b343ac3ead4008b07
+  git_blob_sha1: 133a429215457bb859599ad2b238fbf4c3e38962
+  remote_blob_verified: true
+- path: target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/reports/MA-DR-08-report-parts/part-003.md
+  transport: plain_utf8
+  bytes: 11844
+  sha256: 33246454cb8589801d14a90524689979c453fd79c9c74fbddcb0aceea1a84b2b
+  git_blob_sha1: b39813f1c70fa632f66866818e66ed672c148c70
+  remote_blob_verified: true
+- path: target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/reports/MA-DR-08-report-parts/part-004.md
+  transport: plain_utf8
+  bytes: 11940
+  sha256: 55d6e511654aff6aace998930d0ff24a1c2791e8a8199e7c75cb2408bd65c53d
+  git_blob_sha1: 00bc1a90faf3cbc74cbbd206c9b6fb8a6a9ca075
+  remote_blob_verified: true
+- path: target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/reports/MA-DR-08-report-parts/part-005.md
+  transport: plain_utf8
+  bytes: 11991
+  sha256: 6b49a679a0c29b9a46a0810fadfa7a2e13420dbafaeb2d823d804824b762267e
+  git_blob_sha1: 278b3822833533f1722f2ae26380cae5c055a115
+  remote_blob_verified: true
+- path: target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/reports/MA-DR-08-report-parts/part-006.md
+  transport: plain_utf8
+  bytes: 11939
+  sha256: 0c6d18deae5aa7083fd7130808e65d5b01fa26dc8a57b03b8f2d4e68a4031ebc
+  git_blob_sha1: 023738b176ea5542cf5e2beeacd1094ae81d2f2e
+  remote_blob_verified: true
+- path: target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/reports/MA-DR-08-report-parts/part-007.md
+  transport: plain_utf8
+  bytes: 11872
+  sha256: 16d9402c58478de10ccaeaa322ba38b9a17887018d746eb4ec287e146ce1e51c
+  git_blob_sha1: 1ab681ca34df9e12721f0f57b7a56c40d9312914
+  remote_blob_verified: true
+- path: target-projects/meta-agent/research/waves/2026Q3-independent-wave-001/reports/MA-DR-08-report-parts/part-008.md
+  transport: plain_utf8
+  bytes: 8034
+  sha256: 50fa3ca5b5a068afcf7874715a90f6fb27f6b43d50d2c1a96d86b0063d685cd9
+  git_blob_sha1: e50798fac5c64c5ed3932c7e31283729580f7758
+  remote_blob_verified: true
+remote_reconstruction_sha256_verified: true

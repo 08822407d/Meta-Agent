@@ -1,0 +1,133 @@
+package_id: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
+artifact_role: target_specific_research_evidence_adjudication_and_staged_followup
+status: repository_recording_pending_human_merge
+target_project_id: meta-agent
+target_truth_source: false
+task_id: META-AGENT-RESEARCH-BATCH-A-ADJUDICATION-001
+repository: 08822407d/Mnemosyne
+pinned_base: master@f690209dfc71e6d235f398589eb7b1aa52b0df71
+canonical_branch: meta-agent-research-batch-a-adjudication-001
+canonical_PR: 242
+repository_write_performed: true
+target_truth_modified: false
+methodology_modified: false
+operational_activation_performed: false
+pilot_authorized: false
+stable_target_IDs_issued: false
+report_sources:
+- research_id: MA-DR-06
+  path: target-projects/meta-agent/research/batches/2026Q3-batch-a/reports/MA-DR-06-report-parts/
+  bytes: 52711
+  sha256: a02278ae871a2cf5b7716df52b0b8f4631dc2557d265ab8846af379349cc1452
+  identity: PASS
+  repository_binding: BLOCKED_BY_MISSING_TARGET_INPUTS
+  disposition: ACCEPT_EVIDENCE_ONLY_TARGET_MAPPING_BLOCKED
+  rerun_required: false
+  part_count: 6
+- research_id: MA-DR-07
+  path: target-projects/meta-agent/research/batches/2026Q3-batch-a/reports/MA-DR-07-report-parts/
+  bytes: 72539
+  sha256: 264ac917af37ce77e605790bb8dbe2ef2ad25a65d418c9475af11c9519f794a0
+  identity: PASS
+  repository_binding: PASS
+  disposition: ACCEPT_WITH_CORRECTIONS_AS_NON_EXECUTION_SOURCE_EVIDENCE
+  rerun_required: false
+  part_count: 8
+cross_report_verdict: ACCEPT_BATCH_A_AS_NON_EXECUTION_SOURCE_EVIDENCE_WITH_CORRECTIONS
+Batch_B_gate: GENERATE_DR_08_ONLY
+MA_DR_08:
+  execution_disposition: READY_NOT_SELECTED
+  execution_requested: false
+  quota_authorized: false
+MA_DR_09:
+  status: DEFERRED_UNTIL_MA_DR_08_ADJUDICATION
+  runnable_task_present: false
+portability_limits:
+- MA_DR_06_three_sandbox_images_not_in_export
+- current_preprint_claims_require_version_and_freshness_review
+files_excluding_this_manifest:
+- path: README.md
+  bytes: 5187
+  sha256: d9ffa7cd48b4d9ea8f20a15e43b82b999b8fa7b95ddf4fd6b8aafdfb75896920
+- path: candidates/Batch-A-candidate-change-ledger.md
+  bytes: 3323
+  sha256: 99368abef069f12adaa1e2d89cfd22bb0d6e4dfabaf643476e254cb7a37c7621
+- path: decisions/Batch-B-gate-decision.md
+  bytes: 2340
+  sha256: ef15ad5f036de4694fcaa124df070422046636c36214b48a9be0ca89c79fb048
+- path: deferred/MA-DR-09-input-contract.md
+  bytes: 1381
+  sha256: b322bbc7dab1c2303ef56a794f52440ec8af615f1a3cb2a7b383b187311c0cc6
+- path: meta/repository-recording-plan.md
+  bytes: 3341
+  sha256: c43394af4463400a07c067b7080b8562c8b6efa26ce8c43f99cff2eb7095a15e
+- path: reports/MA-DR-06-report-parts/MA-DR-06-report.part-001-of-006.md
+  bytes: 9950
+  sha256: b20b89f635c1a17282a5ed210d8dd13bee49203b36f6ea23d0cead9478e6e9bc
+- path: reports/MA-DR-06-report-parts/MA-DR-06-report.part-002-of-006.md
+  bytes: 9981
+  sha256: 55a220e4f5d9fa02b4fe0ac5e8500fc8da65508afec08663e19bfe4c6ea07201
+- path: reports/MA-DR-06-report-parts/MA-DR-06-report.part-003-of-006.md
+  bytes: 9632
+  sha256: 44fbe5ffa3432aa437524685656d26045c4233c75a482b3848886c3b0c27212e
+- path: reports/MA-DR-06-report-parts/MA-DR-06-report.part-004-of-006.md
+  bytes: 9892
+  sha256: 632553ab6143a982297359768f6e69006bca0c250da5b2c12b6c6f6fef816ac6
+- path: reports/MA-DR-06-report-parts/MA-DR-06-report.part-005-of-006.md
+  bytes: 9870
+  sha256: bf5dcf0ed72419fe8885a46c4e1822b3805777f1616052e67286d63b113df590
+- path: reports/MA-DR-06-report-parts/MA-DR-06-report.part-006-of-006.md
+  bytes: 3386
+  sha256: 4ede26cab985ea8f3a554b9845bcd1aa584469a290c266b4052e91854ee472c7
+- path: reports/MA-DR-07-report-parts/MA-DR-07-report.part-001-of-008.md
+  bytes: 9891
+  sha256: b8912567c85f49eacc6fc1b7751e3bb9277363bbea33763c1b3e06b51485c749
+- path: reports/MA-DR-07-report-parts/MA-DR-07-report.part-002-of-008.md
+  bytes: 9883
+  sha256: 186c4dd6742d9ef405f34f9fc60a4a1febc4aaa04d81364726bb82fea310956e
+- path: reports/MA-DR-07-report-parts/MA-DR-07-report.part-003-of-008.md
+  bytes: 9883
+  sha256: 67429227fd21a309db93b630c3642c6395b97f313bc726e107637c004031c9e1
+- path: reports/MA-DR-07-report-parts/MA-DR-07-report.part-004-of-008.md
+  bytes: 9928
+  sha256: 7f4d8c3a4427a6d1e7f83aedf2156c75417788beab0fb28dd58d5366df97c3b8
+- path: reports/MA-DR-07-report-parts/MA-DR-07-report.part-005-of-008.md
+  bytes: 9976
+  sha256: f38913d786073f1b68c5bb2cd253a82f4022d4bff7397c1fc96320979dfb26ee
+- path: reports/MA-DR-07-report-parts/MA-DR-07-report.part-006-of-008.md
+  bytes: 9914
+  sha256: 8e78a6743a7d0b29a9862cab703f59d1635bffd0d278250da9b24c1fd205e0f7
+- path: reports/MA-DR-07-report-parts/MA-DR-07-report.part-007-of-008.md
+  bytes: 9974
+  sha256: fb0e9af9812ac4b1dab4370c214fdfa0aea30a112bfb51c56758e9ca384fd0e6
+- path: reports/MA-DR-07-report-parts/MA-DR-07-report.part-008-of-008.md
+  bytes: 3090
+  sha256: 2a66b29356e46a78fa4e0c7bec1f1ae4a9d7e248ec29dfdfb99918662132bb8d
+- path: reports/README.md
+  bytes: 2223
+  sha256: 12c19d447e0440626ab9cee199ed22d0976830fb0eb44aeac908f11db0049ef0
+- path: reports/report-parts-manifest.yaml
+  bytes: 3122
+  sha256: cbf04d8da689ba02e69e707e7141538d683976b446a13d4825608505af51e9a7
+- path: reviews/MA-DR-06-07-cross-report-adjudication.md
+  bytes: 11401
+  sha256: 13bc3e65979d97a8a815ac63da1e525b07b0d5dbb92832771b5727c282dbf477
+- path: reviews/MA-DR-06-intake-review.md
+  bytes: 4439
+  sha256: 261d0626695c221b83f6c1308f40a26678de402c5831539bd3463680dc6b2e8a
+- path: reviews/MA-DR-07-intake-review.md
+  bytes: 3765
+  sha256: 8ce5a682534383e294e1a9ef032a375704c1e18ff8f26f049a7bca21c4cf6994
+- path: tasks/MA-DR-08-OPERATOR.md
+  bytes: 2197
+  sha256: c6f26f0225ada14fe87e9ff4dbe0ba2855623876ae73ea35ffb9d667d9e86060
+- path: tasks/MA-DR-08-portable-agent-design-ir-and-multi-backend-mapping.md
+  bytes: 13419
+  sha256: 99e0682a227762c41d11a1ac85adeee46d81f03f6b940a56ede1234e00d5461d
+- path: tasks/MA-DR-08-return-and-adjudication-contract.md
+  bytes: 1524
+  sha256: fba1206c2264805220f5339f335e1a8f6ea170f94946c4d032a3644b34e612e7
+report_storage:
+  model: ordered_utf8_markdown_parts
+  manifest_path: target-projects/meta-agent/research/batches/2026Q3-batch-a/reports/report-parts-manifest.yaml
+  reconstruction: lexical_concatenation_without_separator
