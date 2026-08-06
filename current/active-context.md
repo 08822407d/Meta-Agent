@@ -82,14 +82,13 @@ target_truth_cutover: false
 - The source-copy record reports 224 byte-exact files, two intentionally transformed navigation files and zero missing source files.
 - A destination-only fresh-session receiver recovered the project identity, Owner, inactive baseline, authority boundary, migration stage and material/automation restrictions without reading Mnemosyne.
 - That receiver also demonstrated that the live navigation files still described the already-completed PR #1 review step.
-- This bounded task synchronizes only `MIGRATION-STATUS.md`, `current/active-context.md` and `handoff/handoff-current.md` to the post-merge state.
+- The bounded post-merge navigation correction synchronizes only `MIGRATION-STATUS.md`, `current/active-context.md` and `handoff/handoff-current.md` to the post-merge state.
 
 ## Pending
 
-1. Merge the bounded post-merge navigation correction.
-2. Rerun the destination-only fresh-session recovery against the resulting `master`.
-3. If the rerun passes, return the result to the Owner and prepare a separate cutover decision.
-4. After a separate explicit Owner cutover, freeze or redirect the old Mnemosyne target root and verify no-dual-writer and rollback behavior.
+1. Rerun the destination-only fresh-session recovery against the corrected `master`.
+2. If the rerun passes, return the result to the Owner and prepare a separate cutover decision.
+3. After a separate explicit Owner cutover, freeze or redirect the old Mnemosyne target root and verify no-dual-writer and rollback behavior.
 
 ## Deferred
 
@@ -99,7 +98,7 @@ target_truth_cutover: false
 ## Exactly one safe next action
 
 ```yaml
-safe_next_action: rerun_destination_only_fresh_session_recovery_after_this_bounded_navigation_correction_is_merged
+safe_next_action: rerun_destination_only_fresh_session_recovery_against_the_corrected_master
 no_automatic_cutover: true
 no_automatic_operational_activation: true
 no_memory_foundation_in_this_step: true
