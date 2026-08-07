@@ -73,13 +73,15 @@ Mnemosyne_source_retirement:
   Meta_Agent_live_writes_prohibited: true
 
 branch_residuals:
-  action: normalized_merged_branch_refs_to_current_master
+  action: normalized_merged_branch_refs_to_pre_closeout_master
+  normalization_commit: b99fb8a7f89f527044895353b594307288cbfd2c
   normalized_branches:
     - codex/follow-migration-instructions-from-repository
     - meta-agent-dedicated-repository-cutover-001
     - meta-agent-p0-static-design-conformance-frontier-review-001
     - meta-agent-post-merge-navigation-correction-001
-  unique_unmerged_commits_remaining: 0
+  unique_unmerged_commits_at_closeout_preparation: 0
+  note: branch_names_may_remain_visible_but_do_not_carry_independent_work
 
 current_product_state:
   PR_4_frontier_review_merge_commit: b99fb8a7f89f527044895353b594307288cbfd2c
