@@ -1,6 +1,7 @@
 record_id: META-AGENT-DEDICATED-REPOSITORY-SOURCE-SNAPSHOT-001
-artifact_role: migration_source_identity_historical_bootstrap_and_rollback_pointer
+artifact_role: migration_source_identity_historical_bootstrap_rollback_and_closeout_pointer
 target_truth_source: false
+
 source:
   repository: 08822407d/Mnemosyne
   commit: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
@@ -8,10 +9,14 @@ source:
   target_truth_path_at_snapshot: target-projects/meta-agent/current/approved-spec.md
   root_subtree_sha: 4c1cd341777d46b3d6794abc62682e9c915ec46a
   file_or_blob_count: 226
-  post_cutover_role: immutable_historical_bootstrap_and_rollback_snapshot
+  post_cutover_role:
+    - immutable_historical_bootstrap_snapshot
+    - migration_evidence
+    - rollback_source
   authoritative: false
   active_writer: false
   Meta_Agent_writes_prohibited: true
+
 mapping:
   rule: strip_target-projects/meta-agent_prefix
   destination_repository: 08822407d/Meta-Agent
@@ -21,29 +26,61 @@ mapping:
   transformed_live_navigation:
     - current/active-context.md
     - handoff/handoff-current.md
+  missing_files: 0
+
 excluded_from_import:
   - PR_258_source_inventory_generator_and_control_manifests_added_after_the_frozen_snapshot
   - Mnemosyne_root_taskbooks_adjudications_and_task_result_records_outside_the_source_root
   - meta-agent-dedicated-repository-mapping-resume-001_unmerged_branch_artifacts
   - Mnemosyne_initial_memory_system_candidate_and_alignment_work
+
 verification:
   source_copy_result: PASS
   destination_only_recovery_first_run: PASS_WITH_STALE_POST_MERGE_NAVIGATION
   destination_only_recovery_rerun: PASS
   rerun_evaluated_master: d3d4c770fbef851f2d094122b22bfcb539e7a8da
   repository_T5_gate: PASS
+  post_cutover_verification_task: META-AGENT-POST-CUTOVER-RECOVERY-AND-NO-DUAL-WRITER-VERIFICATION-001
+  post_cutover_receiver_report: PASS
+  cutover_integrity: PASS
+  no_dual_writer: PASS
+  source_activity_freeze: PASS
+
 cutover:
   task_id: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
+  PR: 3
+  merge_commit: eb71ed350e7cf1783d73580466a3656fad2a3b69
   owner_decision: APPROVE_DEDICATED_REPOSITORY_TARGET_TRUTH_CUTOVER
-  effective_condition: this_cutover_change_is_present_on_master
   target_truth_repository: 08822407d/Meta-Agent
   target_truth_path: current/approved-spec.md
   target_truth_cutover: true
   operational_activation: false
+
+source_retirement:
+  repository: 08822407d/Mnemosyne
+  task_id: MNEMOSYNE-META-AGENT-SOURCE-RETIREMENT-001
+  PR: 261
+  merge_commit: c85ebba5425da4daf6f3344690778682b9f79d66
+  result: PASS
+  live_looking_truth_current_handoff_and_guard_paths_retired: true
+  wayfinding_updated: true
+  historical_evidence_deleted: false
+  authoritative: false
+  active_writer: false
+
 no_dual_writer:
   sole_authoritative_repository: 08822407d/Meta-Agent
   sole_active_writer_repository: 08822407d/Meta-Agent
   historical_source_writes_prohibited: true
+  competing_open_migration_PRs: 0
+  competing_ahead_merged_task_branches_after_normalization: 0
+
+migration_closeout:
+  task_id: META-AGENT-DEDICATED-REPOSITORY-MIGRATION-CLOSEOUT-001
+  effective_condition: this_closeout_change_is_present_on_master
+  status: complete_when_effective_condition_is_true
+  next_product_gate: P0_candidate_specification_v0_2_revision
+
 rollback:
   trigger:
     - post_cutover_recovery_failure
@@ -53,6 +90,7 @@ rollback:
     - revert_the_cutover_change_in_08822407d_Meta_Agent
     - restore_the_pinned_source_snapshot_as_authoritative_only_by_separate_explicit_Owner_decision
   operational_side_effect_rollback_required: false
+
 memory_foundation:
   adopted: false
-  deferred_until: migration_closeout_and_separate_Owner_review
+  deferred_until: separate_post_migration_Owner_review
