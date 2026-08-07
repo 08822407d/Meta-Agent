@@ -1,0 +1,145 @@
+contract_id: META-AGENT-P0-STATIC-DESIGN-CONFORMANCE-REVISION-CONTRACT-V0.2
+artifact_role: candidate_specification_revision_contract
+status: candidate_revision_required
+target_project_id: meta-agent
+source_candidate: META-AGENT-P0-STATIC-DESIGN-CONFORMANCE-MVI-001
+frontier_review: META-AGENT-P0-STATIC-DESIGN-CONFORMANCE-FRONTIER-REVIEW-001
+target_truth_source: false
+target_truth_change: false
+methodology_change: false
+implementation_authorized: false
+prototype_run_authorized: false
+
+required_closures:
+  F01_repository_and_path_metadata:
+    required:
+      - use_dedicated_repository_relative_paths
+      - mark_original_draft_as_historical_input
+      - mark_revised_candidate_as_repository_recorded
+      - preserve_original_provenance
+    acceptance:
+      stale_target_projects_meta_agent_operational_refs: 0
+
+  F02_canonicalization:
+    required:
+      - UTF_8_no_BOM
+      - explicit_Unicode_normalization_policy
+      - LF_and_final_newline_policy
+      - duplicate_mapping_keys_rejected
+      - YAML_1_2_subset_scalar_rules
+      - single_document_only
+      - deterministic_JSON_key_order
+      - deterministic_number_and_escape_rules
+      - SHA_256_hashes
+      - canonical_outputs_separate_from_volatile_receipts
+    acceptance:
+      independent_reference_vectors_defined: true
+
+  F03_schema_and_extensions:
+    required:
+      - machine_readable_schema
+      - required_optional_and_nullability_rules
+      - additional_properties_or_extension_namespace_rule
+      - identifier_grammar_and_uniqueness_scope
+      - schema_version_compatibility_rule
+      - ordered_vs_set_like_array_declarations
+    acceptance:
+      every_normative_field_machine_validatable: true
+
+  F04_graph_and_termination:
+    required:
+      - exactly_one_entry_step
+      - explicit_terminal_node_representation
+      - exact_edge_schema
+      - structural_reachability_algorithm
+      - unreachable_node_disposition
+      - strongly_connected_component_rule
+      - retry_bound_composition_rule
+    acceptance:
+      N05_expected_error_set_exactly_defined: true
+
+  F05_authority_and_permissions:
+    required:
+      - finite_action_taxonomy
+      - resource_scope_syntax
+      - scope_containment_algorithm
+      - authority_grant_schema
+      - permission_expiry_semantics
+      - grant_containment_rule
+    acceptance:
+      E300_machine_decidable: true
+
+  F06_provenance_and_backend_mapping:
+    required:
+      - explicit_freshness_data_type
+      - impact_class
+      - checked_at_semantics
+      - retained_weakened_lost_guarantee_fields
+      - PRESERVED_forbidden_when_guarantee_loss_nonempty
+      - backend_binding_identity_not_consumer_label_attestation
+    acceptance:
+      E501_and_E502_machine_decidable: true
+
+  F07_fixture_oracle_and_coverage:
+    required:
+      - exact_expected_error_multiset_per_fixture
+      - unexpected_error_policy
+      - warning_policy
+      - rule_to_fixture_coverage_matrix
+      - positive_semantic_area_coverage
+      - every_enabled_rule_has_negative_trigger
+    acceptance:
+      enabled_rules_without_fixture_coverage: 0
+
+  F08_repeatability_and_receipts:
+    required:
+      - fully_deterministic_canonical_result_files
+      - separate_noncanonical_run_receipt
+      - deterministic_manifest_order
+      - SHA_256_clean_rebuild_comparison
+    acceptance:
+      exception_inside_canonical_byte_identity: false
+
+  F09_offline_boundary_proof:
+    required:
+      - enforceable_network_disabled_environment_or_equivalent
+      - allowed_local_process_and_IO_definition
+      - prohibited_connector_API_model_calls
+      - enforcement_evidence_in_run_receipt
+      - BLOCKED_when_not_demonstrable
+    acceptance:
+      self_report_only_boundary_proof: false
+
+  F10_human_gate_policy:
+    select_exactly_one:
+      - conservative_external_write_profile
+      - bounded_owner_preauthorization_profile
+    invariant:
+      irreversible_effect_always_requires_human_gate: true
+    acceptance:
+      external_read_write_and_side_effect_terms_defined: true
+
+non_blocking_revisions:
+  - separate_material_class_from_confidentiality
+  - define_error_warning_and_unknown_field_policy
+  - define_strong_single_agent_label_without_capability_claim
+  - keep_burden_measurements_outside_mechanical_PASS
+
+required_package:
+  - README.md
+  - candidate-spec-v0.2.md
+  - revision-contract-v0.2.yaml
+  - schema/design.schema.json
+  - contracts/canonicalization-contract.md
+  - contracts/graph-and-termination-contract.md
+  - contracts/authority-and-permission-contract.md
+  - contracts/provenance-and-backend-mapping-contract.md
+  - fixtures/fixture-manifest.yaml
+  - fixtures/expected-diagnostics.yaml
+  - fixtures/rule-coverage-matrix.yaml
+  - acceptance-checks.yaml
+
+next_gate:
+  required_result: IMPLEMENTATION_READY
+  reviewer: frontier
+  implementation_requires_separate_Owner_authorization: true
