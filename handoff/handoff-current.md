@@ -70,8 +70,10 @@ Mnemosyne_source_retirement:
   active_writer: false
 
 merged_branch_residuals:
-  unique_unmerged_commits: 0
-  refs_normalized_to_current_master: true
+  normalization_commit: b99fb8a7f89f527044895353b594307288cbfd2c
+  unique_unmerged_commits_at_closeout_preparation: 0
+  branch_names_may_remain_visible: true
+  independent_work_remaining: false
 
 operational_activation: false
 initial_memory_system_adopted: false
