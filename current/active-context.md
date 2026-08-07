@@ -2,54 +2,20 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-ACTIVE-CONTEXT-001
 artifact_role: non_execution_current_state
-status: dedicated_repository_authoritative_inactive_cutover_complete
+status: dedicated_repository_migration_closed_p0_specification_revision_ready
 authority_level: operational_support
 target_runtime_truth_source: false
-last_updated_by_task: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
+last_updated_by_task: META-AGENT-DEDICATED-REPOSITORY-MIGRATION-CLOSEOUT-001
 design_version: 0.1.0
 ---
 
-# Meta-Agent Active Context — Dedicated Repository Authoritative, Operationally Inactive
+# Meta-Agent Active Context — Migration Closed, P0 Specification Revision Ready
 
 ```yaml
 route: META_AGENT_PRODUCT_BUILD
-phase: post_cutover_verification_and_migration_closeout
+phase: P0_static_design_conformance_candidate_specification_revision
 owner: user
 owner_disposition: ACCEPT_WITH_LIMITATIONS
-
-cutover:
-  task_id: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
-  owner_decision: APPROVE_DEDICATED_REPOSITORY_TARGET_TRUTH_CUTOVER
-  effective_condition: this_cutover_change_is_present_on_master
-
-migration_completion:
-  destination_repository: 08822407d/Meta-Agent
-  PR_1_merged: true
-  PR_1_merge_commit: 322d4d437c4df79e17de1ad7137edf0f7ad76f34
-  PR_2_merged: true
-  PR_2_merge_commit: d3d4c770fbef851f2d094122b22bfcb539e7a8da
-  source_snapshot:
-    repository: 08822407d/Mnemosyne
-    commit: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
-    root: target-projects/meta-agent/
-    root_subtree_sha: 4c1cd341777d46b3d6794abc62682e9c915ec46a
-  files_imported: 226
-  byte_exact_files: 224
-  transformed_live_navigation:
-    - current/active-context.md
-    - handoff/handoff-current.md
-  missing_files: 0
-  path_mapping: project_root_flattening
-
-destination_only_recovery:
-  first_run_result: PASS_WITH_STALE_POST_MERGE_NAVIGATION
-  correction_task: META-AGENT-POST-MERGE-NAVIGATION-CORRECTION-001
-  rerun_task: META-AGENT-DESTINATION-ONLY-FRESH-SESSION-RECOVERY-RERUN-001
-  rerun_evaluated_master: d3d4c770fbef851f2d094122b22bfcb539e7a8da
-  rerun_result: PASS
-  repository_T5_gate: PASS
-  navigation_freshness: PASS
-  authority_recovery: PASS
 
 authority:
   authoritative_repository: 08822407d/Meta-Agent
@@ -57,29 +23,57 @@ authority:
   authoritative_path: current/approved-spec.md
   active_writer_repository: 08822407d/Meta-Agent
   effective_for_operational_use: false
+  target_truth_cutover: true
+  operational_activation: false
 
-  previous_bootstrap_repository: 08822407d/Mnemosyne
-  previous_bootstrap_commit: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
-  previous_bootstrap_path: target-projects/meta-agent/current/approved-spec.md
-  previous_bootstrap_role: immutable_historical_bootstrap_and_rollback_snapshot
-  previous_bootstrap_authoritative: false
-  previous_bootstrap_active_writer: false
-  Meta_Agent_writes_to_previous_bootstrap_root: prohibited
+migration_closeout:
+  task_id: META-AGENT-DEDICATED-REPOSITORY-MIGRATION-CLOSEOUT-001
+  effective_condition: this_closeout_change_is_present_on_master
+  source_snapshot:
+    repository: 08822407d/Mnemosyne
+    commit: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
+    root: target-projects/meta-agent/
+    root_subtree_sha: 4c1cd341777d46b3d6794abc62682e9c915ec46a
+  imported_files: 226
+  byte_exact_files: 224
+  transformed_files:
+    - current/active-context.md
+    - handoff/handoff-current.md
+  missing_files: 0
+  shadow_import_PR_1: 322d4d437c4df79e17de1ad7137edf0f7ad76f34
+  navigation_correction_PR_2: d3d4c770fbef851f2d094122b22bfcb539e7a8da
+  cutover_PR_3: eb71ed350e7cf1783d73580466a3656fad2a3b69
+  post_cutover_recovery: PASS
+  no_dual_writer: PASS
+  Mnemosyne_source_retirement_PR_261: c85ebba5425da4daf6f3344690778682b9f79d66
+  Mnemosyne_current_role:
+    - historical_bootstrap
+    - migration_evidence
+    - rollback_source
+  Mnemosyne_authoritative: false
+  Mnemosyne_active_writer: false
+  Meta_Agent_live_writes_in_Mnemosyne: prohibited
 
-initial_memory_system_foundation:
-  status: deferred_until_migration_closeout
-  adopted: false
+P0_static_design_conformance_candidate:
+  original_specification: candidates/p0-static-design-conformance-mvi/candidate-spec-draft-2026-08-05.md
+  frontier_review: candidates/p0-static-design-conformance-mvi/frontier-review-2026-08-06.md
+  revision_contract: candidates/p0-static-design-conformance-mvi/revision-contract-v0.2.yaml
+  PR_4_merge_commit: b99fb8a7f89f527044895353b594307288cbfd2c
+  scope_disposition: ACCEPT
+  implementation_readiness: FAIL_REVISION_REQUIRED
+  candidate_spec_v0_2_required: true
+  implementation_authorized: false
+  prototype_run_authorized: false
+  additional_Deep_Research_required: false
 
 Meta_Agent_owned_behavior_guidance:
   status: not_yet_adopted
   Mnemosyne_compatibility_guard: retired_historical_evidence
   separate_owner_review_required: true
 
-P0_static_design_conformance_candidate:
-  specification_drafted: true
-  frontier_review_pending: true
-  implementation_authorized: false
-  run_authorized: false
+initial_memory_system_foundation:
+  status: deferred_to_separate_post_migration_Owner_review
+  adopted: false
 
 pilot_authorized: false
 private_material_authorized: false
@@ -87,35 +81,39 @@ RAG_authorized: false
 MCP_authorized: false
 automation_authorized: false
 operational_activation_authorized: false
-target_truth_cutover: true
 ```
 
 ## Completed
 
-- The frozen 226-file Meta-Agent project snapshot was imported into the dedicated repository through PR #1.
-- PR #2 repaired the demonstrated post-merge live-navigation defect.
-- A destination-only fresh-session rerun recovered the project, Owner, authority boundary, inactive status and safe next action from the dedicated repository and passed the repository T5 recovery gate.
-- The Owner approved the dedicated-repository target-truth cutover through `META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001`.
-- When this cutover change is present on `master`, `08822407d/Meta-Agent/current/approved-spec.md` is the sole Meta-Agent target truth and the only live writer location.
-- The pinned Mnemosyne snapshot is historical bootstrap and rollback evidence only.
+- Preserved and imported the frozen 226-file Meta-Agent project snapshot into the dedicated repository.
+- Verified 224 byte-exact files, two intentionally transformed navigation files and zero missing source files.
+- Repaired the first post-merge navigation defect and passed destination-only fresh-session recovery.
+- Completed the Owner-approved target-truth cutover to `08822407d/Meta-Agent/current/approved-spec.md` while keeping the baseline operationally inactive.
+- Passed post-cutover destination recovery and no-dual-writer verification.
+- Retired the live-looking Meta-Agent source paths in Mnemosyne through PR #261; the pinned source is historical and rollback evidence only.
+- Completed the P0 candidate frontier review through Meta-Agent PR #4; the scope is accepted but the draft requires specification revision before implementation.
+- Normalized all merged Meta-Agent task branch refs to the latest pre-closeout `master`; no unique unmerged commits remain on those branches.
 
 ## Pending
 
-1. Perform a read-only post-cutover fresh-session recovery and no-dual-writer verification.
-2. Confirm that no Meta-Agent live-state writes continue under the Mnemosyne target root; any physical Mnemosyne redirect or tombstone is a separate minimal follow-up owned by the Mnemosyne route.
-3. After migration closeout, separately review and adopt Meta-Agent-owned behavior guidance before relying on project-specific repository-operation guidance.
-4. Resume the P0 static design-conformance candidate only under a separate task-local authorization.
+1. Produce the candidate-only P0 v0.2 specification and exact supporting contracts required by `revision-contract-v0.2.yaml`.
+2. Run an internal consistency review of that candidate package.
+3. Obtain a frontier implementation-readiness re-review.
+4. Request separate task-local Owner implementation authorization only if the re-review returns `IMPLEMENTATION_READY`.
 
 ## Deferred
 
+- Meta-Agent-owned behavior guidance adoption.
 - Initial memory-system foundation, artifact-role registry, memory envelope, load profiles and active-memory index.
-- RAG, MCP, automation, private-material support, prototype, benchmark, pilot and operational activation.
+- RAG, MCP, automation, private-material support, prototype execution, benchmark, pilot and operational activation.
 
 ## Exactly one safe next action
 
 ```yaml
-safe_next_action: perform_read_only_post_cutover_destination_recovery_and_no_dual_writer_verification
-no_operational_activation_in_this_step: true
+safe_next_action: author_candidate_spec_v0_2_and_exact_supporting_contracts_as_candidate_only_artifacts
+revision_contract: candidates/p0-static-design-conformance-mvi/revision-contract-v0.2.yaml
+no_implementation_in_this_step: true
+no_prototype_run_in_this_step: true
 no_memory_foundation_in_this_step: true
-no_Mnemosyne_write_in_this_task: true
+no_operational_activation_in_this_step: true
 ```

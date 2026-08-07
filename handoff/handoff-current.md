@@ -2,85 +2,81 @@
 target_project_id: meta-agent
 artifact_id: META-AGENT-V0.1-HANDOFF-001
 artifact_role: fresh_session_handoff
-status: dedicated_repository_authoritative_inactive_post_cutover_verification_pending
+status: dedicated_repository_migration_closed_p0_specification_revision_ready
 authority_level: non_execution_navigation
 target_runtime_truth_source: false
-last_updated_by_task: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
+last_updated_by_task: META-AGENT-DEDICATED-REPOSITORY-MIGRATION-CLOSEOUT-001
 ---
 
-# Meta-Agent Handoff — Dedicated Repository Authoritative, Operationally Inactive
+# Meta-Agent Handoff — Migration Closed, P0 Specification Revision Ready
 
 ## Authority boundary
 
-When `META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001` is present on `master`, the sole Meta-Agent target truth is:
+The sole Meta-Agent target truth and sole live-writer location are:
 
 ```text
 08822407d/Meta-Agent
 current/approved-spec.md
 ```
 
-The previous bootstrap source is pinned only as historical and rollback evidence:
+```yaml
+authoritative: true
+active_writer: true
+effective_for_operational_use: false
+operational_activation: false
+```
+
+The previous source is retained only as immutable historical bootstrap, migration evidence and an Owner-controlled rollback source:
 
 ```text
 08822407d/Mnemosyne@8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
-target-projects/meta-agent/current/approved-spec.md
+target-projects/meta-agent/
 ```
 
-It is no longer authoritative, is not an active writer, and must not receive new Meta-Agent live-state writes unless the Owner explicitly authorizes a rollback.
+Mnemosyne is not authoritative for current Meta-Agent work, is not an active writer, and must not receive new Meta-Agent live-state writes unless the Owner explicitly authorizes a rollback.
 
-The repository cutover does not make the approved spec effective for operational use.
-
-## Verified migration and recovery facts
+## Migration closeout facts
 
 ```yaml
 route: META_AGENT_PRODUCT_BUILD
 owner: user
 owner_disposition: ACCEPT_WITH_LIMITATIONS
 
-PR_1_shadow_import:
-  merged: true
-  merge_commit: 322d4d437c4df79e17de1ad7137edf0f7ad76f34
-
-PR_2_navigation_correction:
-  merged: true
-  merge_commit: d3d4c770fbef851f2d094122b22bfcb539e7a8da
-
 source_snapshot:
-  repository: 08822407d/Mnemosyne
-  commit: 8ef1c43b18b8686a30ffef544ca8b32fce1ca6cb
-  root: target-projects/meta-agent/
-  root_subtree_sha: 4c1cd341777d46b3d6794abc62682e9c915ec46a
-
-copy_verification:
-  source_files: 226
+  files: 226
   byte_exact_files: 224
   transformed_files:
     - current/active-context.md
     - handoff/handoff-current.md
   missing_files: 0
-  result: PASS
 
-destination_only_recovery:
-  first_run_result: PASS_WITH_STALE_POST_MERGE_NAVIGATION
-  rerun_task: META-AGENT-DESTINATION-ONLY-FRESH-SESSION-RECOVERY-RERUN-001
-  rerun_evaluated_master: d3d4c770fbef851f2d094122b22bfcb539e7a8da
-  rerun_result: PASS
-  repository_T5_gate: PASS
-  authority_recovery: PASS
-  safe_next_action_recovery: PASS
+Meta_Agent_PRs:
+  shadow_import_PR_1: 322d4d437c4df79e17de1ad7137edf0f7ad76f34
+  navigation_correction_PR_2: d3d4c770fbef851f2d094122b22bfcb539e7a8da
+  cutover_PR_3: eb71ed350e7cf1783d73580466a3656fad2a3b69
+  P0_frontier_review_PR_4: b99fb8a7f89f527044895353b594307288cbfd2c
 
-cutover:
-  task_id: META-AGENT-DEDICATED-REPOSITORY-CUTOVER-001
-  owner_decision: APPROVE_DEDICATED_REPOSITORY_TARGET_TRUTH_CUTOVER
-  effective_condition: this_cutover_change_is_present_on_master
-  target_truth_repository: 08822407d/Meta-Agent
-  target_truth_path: current/approved-spec.md
-  destination_authoritative: true
-  destination_active_writer: true
-  effective_for_operational_use: false
-  operational_activation: false
+verification:
+  destination_only_recovery: PASS
+  post_cutover_recovery: PASS
+  cutover_integrity: PASS
+  no_dual_writer: PASS
 
-initial_memory_system_work: deferred
+Mnemosyne_source_retirement:
+  PR: 261
+  merge_commit: c85ebba5425da4daf6f3344690778682b9f79d66
+  source_paths_retired_to_redirects: true
+  authoritative: false
+  active_writer: false
+
+merged_branch_residuals:
+  normalization_commit: b99fb8a7f89f527044895353b594307288cbfd2c
+  unique_unmerged_commits_at_closeout_preparation: 0
+  branch_names_may_remain_visible: true
+  independent_work_remaining: false
+
+operational_activation: false
+initial_memory_system_adopted: false
 private_material_authorized: false
 RAG_authorized: false
 MCP_authorized: false
@@ -88,46 +84,65 @@ automation_authorized: false
 prototype_or_pilot_authorized: false
 ```
 
+## Current product state
+
+The P0 Static Design-Conformance MVI scope has passed frontier scope review but is not implementation-ready.
+
+```yaml
+candidate_root: candidates/p0-static-design-conformance-mvi/
+original_draft: candidate-spec-draft-2026-08-05.md
+frontier_review: frontier-review-2026-08-06.md
+revision_contract: revision-contract-v0.2.yaml
+scope_disposition: ACCEPT
+implementation_readiness: FAIL_REVISION_REQUIRED
+additional_Deep_Research_required: false
+candidate_spec_v0_2_required: true
+implementation_authorized: false
+prototype_run_authorized: false
+```
+
 ## Required reading order
 
-1. `README.md` — repository identity and cutover boundary;
-2. `MIGRATION-STATUS.md` — migration evidence and current verification state;
-3. `current/approved-spec.md` — sole target truth, still operationally inactive;
-4. `authority/source-and-owner-map.md` — Owner, source priority, material and write authority;
-5. `current/active-context.md` — current phase, completed, pending and deferred work;
-6. `handoff/handoff-current.md` — this non-execution navigation;
-7. `history/decision-version-and-migration-log.md` — decisions, migration lineage and rollback;
-8. `methodology/core-methodology.md`;
-9. `cases/case-and-feedback-ledger.md`;
-10. `migration/source-snapshot-pointer.yaml`;
-11. `migration/source-copy-verification.yaml`;
-12. `research/README.md` and only the research manifests or formal reviews required by the current task.
+1. `current/approved-spec.md` — sole target truth, still operationally inactive;
+2. `authority/source-and-owner-map.md` — Owner, source priority, material and write authority;
+3. `current/active-context.md` — current phase and exact next action;
+4. `handoff/handoff-current.md` — this non-execution navigation;
+5. `candidates/p0-static-design-conformance-mvi/README.md`;
+6. `candidates/p0-static-design-conformance-mvi/frontier-review-2026-08-06.md`;
+7. `candidates/p0-static-design-conformance-mvi/revision-contract-v0.2.yaml`;
+8. `candidates/p0-static-design-conformance-mvi/candidate-spec-draft-2026-08-05.md` — historical candidate input only;
+9. `methodology/core-methodology.md` and relevant research reviews only when required by the revision task;
+10. `MIGRATION-STATUS.md` and `migration/source-snapshot-pointer.yaml` only for closed migration provenance.
 
-Historical `target-projects/meta-agent/...` paths inside preserved evidence or old decisions do not override the current repository/path designation. `current/meta-agent-mnemosyne-guidance-compatibility-guard.md` is retired historical evidence and must not be loaded as active guidance.
+`current/meta-agent-mnemosyne-guidance-compatibility-guard.md` is retired historical evidence and must not be loaded as active guidance.
 
 ## Current state
 
 ```yaml
 completed:
-  - source_snapshot_preserved
-  - destination_shadow_import_merged
-  - post_merge_navigation_defect_corrected
-  - destination_only_recovery_rerun_passed
-  - Owner_cutover_decision_recorded_in_this_change
+  - dedicated_repository_file_migration
+  - destination_recovery_and_navigation_correction
+  - Owner_target_truth_cutover
+  - post_cutover_recovery_and_no_dual_writer_verification
+  - Mnemosyne_source_retirement
+  - migration_branch_residual_normalization
+  - P0_candidate_frontier_scope_review
 
 pending:
-  - read_only_post_cutover_destination_recovery
-  - no_dual_writer_and_Mnemosyne_source_freeze_verification
-  - migration_closeout
-  - separate_Meta_Agent_owned_behavior_guidance_review
+  - candidate_spec_v0_2
+  - exact_schema_and_supporting_contracts
+  - internal_consistency_review
+  - frontier_implementation_readiness_re_review
 
 deferred:
+  - implementation_until_separate_Owner_authorization
+  - Meta_Agent_owned_behavior_guidance
   - initial_memory_system_foundation
   - RAG
   - MCP
   - automation
   - private_material
-  - prototype
+  - prototype_run
   - benchmark
   - pilot
   - operational_activation
@@ -136,19 +151,19 @@ deferred:
 ## Exactly one safe next action
 
 ```yaml
-safe_next_action: perform_read_only_post_cutover_destination_recovery_and_no_dual_writer_verification
-success_path:
-  - confirm_fresh_session_recovers_Meta_Agent_current_approved_spec_as_sole_truth
-  - confirm_Mnemosyne_snapshot_is_historical_and_not_a_live_writer
-  - return_result_to_Owner_for_migration_closeout
+safe_next_action: produce_the_candidate_only_P0_v0_2_specification_package_required_by_revision_contract_v0_2
 prohibited_in_same_step:
-  - operational_activation
+  - validator_implementation
+  - fixture_execution
+  - target_truth_change
+  - accepted_methodology_change
+  - stable_target_or_method_ID_issuance
   - initial_memory_system_foundation
   - RAG
   - MCP
   - automation
   - private_material
-  - prototype
   - benchmark
   - pilot
+  - operational_activation
 ```
