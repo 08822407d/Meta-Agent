@@ -13,7 +13,7 @@ authority_level: non_execution_source_advisory
 work_order_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-work-order.md
 work_order_sha256: 3b1e5952b5394c580fcf006422daf6a4ded0ba11dc2fd7fc9c2fe11afbb63999
 supplements_register_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/receipts/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-owner-supplements.md
-supplements_register_sha256_at_copy: 40c78c5323b6154a099499ef3bcf860ba6e571a71c0fa835d7af08e22cc4b69d
+supplements_register_sha256_at_copy: 353df42ea840b825fb30e4c104487cf2f71de3e1c41fe1b46c519666224442c6   # 2026-09-06 补充 #3 后更新
 copied_at: 2026-09-03T09:49:35+08:00
 rule: 工作令 §12——Downloads 原件冻结；写入授权后原文＋全部补充按序进入本文件；此后 Owner 的新补充继续逐字追加在本文件 B 节（同时同步 Downloads 登记件），每条标日期与序号
 verification: 见文末"核验方法"；两段标记行之间的内容与原件字节一致
@@ -300,7 +300,7 @@ session_machine_name: "meta-agent-34 [9b1e59]"
 session_uuid: 5fbf7385-035e-4075-9703-5aaf05159b15
 evidence_class_of_owner_text: DIRECT_OWNER_INSTRUCTION
 evidence_class_of_session_restatement: MODEL_INFERENCE
-gate_status_after_this_entry: STARTED_by_supplement_2_conditional_start_no_open_questions
+gate_status_after_this_entry: GATE_A_PARTIALLY_ADJUDICATED_Q4_Q6_Q7_settled_Q1_source_settled_Q2_Q3_Q5_Q8_deferred
 ```
 
 ---
@@ -351,6 +351,37 @@ Owner 把本轨道定为一条串行工作线，共五段，现在只做第一�
 
 - 会话对任务无阻塞性疑问，按第 4 条视为 Owner 授权开工；工作令 §5 默认值生效（分支 meta-agent-fable5-review-and-design-001、一个 Draft PR、只新建 reviews/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001/）。
 - 本轮工作单元 = 补充 #1 的第一段"复核评审＋改进意见"（工作令阶段 0→1→2）；阶段 0 与阶段 1 之间不再停等 Owner 批示，阶段 2 完成后停下交 Owner 决策。此为会话推断 [MI]，Owner 可随时叫停或恢复逐门停等。
+
+---
+
+## 补充 #3 · 2026-09-06 · 对话中 Owner 对第 ① 段决策清单（99）的答复（登记于 2026-09-06T11:28:01+08:00）
+
+### 过程性消息（Owner，2026-09-06，逐字；非任务条款，登记备查）
+
+> 要不你就在当前对话里直接给我显示那8个问题,要带说明和背景简介(目的是要让我能知道你想问什么),我就直接在对话里回复
+
+### Owner 原话（逐字，A 类）
+
+> 关于1,我不知道所谓规格包合成器是什么.但如果要问用什么真实项目,暂时不要用MyOS2,因为这个项目要求和我描述的Meta-Agent的主要目标软件项目类型很不一样.主要的使用目标的项目类型目前有一部分收集在"git@github.com:08822407d/JobSpecific.git"下的"需求整理"中,作为"具体开发需求和代码库项目"的试验和真实项目来源.关于2,因为在上次推进meta-agent的建设之后一直集中精力推进mnemosyne的建设,所以我几乎忘了meta-agent进行到什么程度,以及你提到的这两个死锁的规则是什么情况,所以先搁置它,后面你帮我好好回忆一下.关于3,我不知道这是什么,需要足够的说明.关于4,行为守则至少要从mnemosyne建设过程中积累的经验中借鉴一部分,你在当前claude code任务中的表现表明急需做这件事.关于5,说的太模糊,不是人类能理解的内容,后续要重新讲解.关于6,可以抽查一下时效性,可能过时的那些重做一次研究,综合分析后来解决其中需要确定的问题.关于7,最好从对话存档里找回原文作文meta-agent的原文基础.关于8,这点也一样,说的过于模糊我不知道你想表达什么.你先做目前确定下来的工作.完成之后解决其他的.
+
+### 会话复述（[MI]，供 Owner 纠正）
+
+| 题 | Owner 的意思（人话） | 本会话据此要做的事 |
+|---|---|---|
+| Q1 | 我上一条里"验证器规格包"等说法你听不懂（我的表达问题）。真实项目**不用 MyOS2**（类型不对）；Meta-Agent 主要面向"具体开发需求和代码库项目"，样本在 JobSpecific 仓库的"需求整理"目录 | 去读 JobSpecific/需求整理，弄清目标项目类型；首个用例从那里选；用人话重新解释 Q1 |
+| Q2 | 你已经不记得 Meta-Agent 做到哪、"死锁"指什么；先搁置；之后要我帮你回忆 | 之后写一份人话的"Meta-Agent 进展与现状回顾"，再重提 Q2 |
+| Q3 | 不知道 non-FABLE health review 是什么；要充分说明 | 之后用人话讲清它的来龙去脉，再重提 Q3 |
+| Q4 | **要**做行为守则；至少借鉴 Mnemosyne 建设中积累的经验；我在本任务里的表现（回复不像人话）说明这件事很急 | 起草守则草案，以 Mnemosyne 经验为主要素材；同时立即改正本会话的回复方式 |
+| Q5 | 太模糊，不是人能理解的；之后重新讲 | 之后用具体例子重讲"治理太重"指什么 |
+| Q6 | 可以：先抽查研究的时效性，可能过时的重做一次研究，综合后再解决其中需要拍板的问题 | 做研究时效性抽查 → 列出需重做的课题 → 综合 → 再把要拍板的问题摆出来 |
+| Q7 | **允许**从对话存档（Alaya）里找回 Owner 原文，作为 Meta-Agent 的原文基础 | 读 Alaya，找回 Owner 关于 Meta-Agent 的原话，建原文登记表 |
+| Q8 | 太模糊，不知道我想说什么 | 之后用具体例子重讲 |
+| 总指令 | 先做已经定下来的（Q1 读 JobSpecific、Q4 守则、Q6 时效抽查、Q7 找回原文），做完再解决其他的（Q2/Q3/Q5/Q8 的重新讲解） | 按此顺序执行 |
+
+### 登记时的门状态
+
+- 门 A（Owner 审阅第 ① 段）：**部分批示**——Q4、Q6、Q7 已定；Q1 定了"不用 MyOS2、用 JobSpecific 来源"；Q2/Q3/Q5/Q8 搁置待重新讲解。
+- Owner 纠正（沟通方式）：本会话的回复与决策清单含 Owner 无法理解的内部术语；自本条起，面向 Owner 的解释须用具体例子、不用未解释的术语。
 <!-- END supplements verbatim -->
 
 ## 核验方法
