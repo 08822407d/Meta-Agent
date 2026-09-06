@@ -13,7 +13,7 @@ authority_level: non_execution_source_advisory
 work_order_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-work-order.md
 work_order_sha256: 3b1e5952b5394c580fcf006422daf6a4ded0ba11dc2fd7fc9c2fe11afbb63999
 supplements_register_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/receipts/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-owner-supplements.md
-supplements_register_sha256_at_copy: 353df42ea840b825fb30e4c104487cf2f71de3e1c41fe1b46c519666224442c6   # 2026-09-06 补充 #3 后更新
+supplements_register_sha256_at_copy: ee2ca623f64985ff97fc4c0caccf434c09b8b03cd1dcbff5ed54d829f4beb8f7   # 2026-09-06 补充 #4 后更新
 copied_at: 2026-09-03T09:49:35+08:00
 rule: 工作令 §12——Downloads 原件冻结；写入授权后原文＋全部补充按序进入本文件；此后 Owner 的新补充继续逐字追加在本文件 B 节（同时同步 Downloads 登记件），每条标日期与序号
 verification: 见文末"核验方法"；两段标记行之间的内容与原件字节一致
@@ -300,7 +300,7 @@ session_machine_name: "meta-agent-34 [9b1e59]"
 session_uuid: 5fbf7385-035e-4075-9703-5aaf05159b15
 evidence_class_of_owner_text: DIRECT_OWNER_INSTRUCTION
 evidence_class_of_session_restatement: MODEL_INFERENCE
-gate_status_after_this_entry: GATE_A_PARTIALLY_ADJUDICATED_Q4_Q6_Q7_settled_Q1_source_settled_Q2_Q3_Q5_Q8_deferred
+gate_status_after_this_entry: BEHAVIOR_GUIDANCE_FIRST_all_other_work_deferred_by_supplement_4
 ```
 
 ---
@@ -382,6 +382,18 @@ Owner 把本轨道定为一条串行工作线，共五段，现在只做第一�
 
 - 门 A（Owner 审阅第 ① 段）：**部分批示**——Q4、Q6、Q7 已定；Q1 定了"不用 MyOS2、用 JobSpecific 来源"；Q2/Q3/Q5/Q8 搁置待重新讲解。
 - Owner 纠正（沟通方式）：本会话的回复与决策清单含 Owner 无法理解的内部术语；自本条起，面向 Owner 的解释须用具体例子、不用未解释的术语。
+
+---
+
+## 补充 #4 · 2026-09-06 · 优先级改变（登记于 2026-09-06T11:54:01+08:00）
+
+### Owner 原话（逐字，A 类）
+
+> 其他工作都往后推,先确定Meta-Agent的行为守则.否则以后你的每次回复都大概率存在各种问题导致大量token用在低效率沟通上.
+
+### 会话复述（[MI]）
+
+先把行为守则定下来（Owner 逐条/整体批准），其他一切（首例、研究、第 ② 段、三个待答问题）都后推；理由是没有守则，会话每次回复都会有沟通问题、浪费 token。守则一旦批准即对本轨道立即生效。
 <!-- END supplements verbatim -->
 
 ## 核验方法
