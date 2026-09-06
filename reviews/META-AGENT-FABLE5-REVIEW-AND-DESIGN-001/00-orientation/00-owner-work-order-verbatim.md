@@ -13,7 +13,7 @@ authority_level: non_execution_source_advisory
 work_order_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-work-order.md
 work_order_sha256: 3b1e5952b5394c580fcf006422daf6a4ded0ba11dc2fd7fc9c2fe11afbb63999
 supplements_register_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/receipts/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-owner-supplements.md
-supplements_register_sha256_at_copy: 9c06175161a98d0bfa472afaf7a17e1ac76f3cd287471cb0a881e405670b60fe   # 2026-09-06 补充 #6 后更新
+supplements_register_sha256_at_copy: c08c5af4f82a9f07e29e0bbe9dc9761dbc897a2ea4ddc69ee525dd832eebcdf7   # 2026-09-06 补充 #7 后更新
 copied_at: 2026-09-03T09:49:35+08:00
 rule: 工作令 §12——Downloads 原件冻结；写入授权后原文＋全部补充按序进入本文件；此后 Owner 的新补充继续逐字追加在本文件 B 节（同时同步 Downloads 登记件），每条标日期与序号
 verification: 见文末"核验方法"；两段标记行之间的内容与原件字节一致
@@ -300,7 +300,7 @@ session_machine_name: "meta-agent-34 [9b1e59]"
 session_uuid: 5fbf7385-035e-4075-9703-5aaf05159b15
 evidence_class_of_owner_text: DIRECT_OWNER_INSTRUCTION
 evidence_class_of_session_restatement: MODEL_INFERENCE
-gate_status_after_this_entry: BEHAVIOR_GUIDANCE_v1_0_ADOPTED_for_this_track_by_supplement_6
+gate_status_after_this_entry: FIRST_CASE_B_and_TRIAL_USE_APPROVED_Q3_pending_reexplanation
 ```
 
 ---
@@ -422,6 +422,20 @@ Owner 把本轨道定为一条串行工作线，共五段，现在只做第一�
 ### 会话复述（[MI]）
 
 Owner 同意守则 v1.0 的四点修订（第 3 条放宽、第 6/8 条降为内部程序、第 12 条重讲、其余 8 条不变＋Meta-Agent 专属 4 项能力）。守则自本条起对本轨道生效；永久位置另定。
+
+---
+
+## 补充 #7 · 2026-09-06 · 三件拍板（登记于 2026-09-06T22:14:24+08:00）
+
+### Owner 原话（逐字，A 类）
+
+> 第一个真实项目选B,第二个如果第一例指的是第一项里说的"第一个真实项目"那就选允许试用,第三个我不知道你说的具体是什么,你必须得给出足够的背景上下文
+
+### 会话复述（[MI]）
+
+1. 首个真实用例 = B（为"从 JobSpecific 11 份需求中抽取公共库"设计 agent 组织）。
+2. 允许试用（前提确认：第一例就是上述 B）。
+3. 第三件（启用前提里的"健康评审"）Owner 不明所指，要求给足背景——本会话违反守则第 3 条，须重讲。
 <!-- END supplements verbatim -->
 
 ## 核验方法
