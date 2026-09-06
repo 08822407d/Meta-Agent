@@ -13,7 +13,7 @@ authority_level: non_execution_source_advisory
 work_order_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-work-order.md
 work_order_sha256: 3b1e5952b5394c580fcf006422daf6a4ded0ba11dc2fd7fc9c2fe11afbb63999
 supplements_register_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/receipts/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-owner-supplements.md
-supplements_register_sha256_at_copy: ee2ca623f64985ff97fc4c0caccf434c09b8b03cd1dcbff5ed54d829f4beb8f7   # 2026-09-06 补充 #4 后更新
+supplements_register_sha256_at_copy: 836a5ee88d268183dbcd3688b27c32e3123424cb53a8c13f7b0a1e2a4a0b6692   # 2026-09-06 补充 #5 后更新
 copied_at: 2026-09-03T09:49:35+08:00
 rule: 工作令 §12——Downloads 原件冻结；写入授权后原文＋全部补充按序进入本文件；此后 Owner 的新补充继续逐字追加在本文件 B 节（同时同步 Downloads 登记件），每条标日期与序号
 verification: 见文末"核验方法"；两段标记行之间的内容与原件字节一致
@@ -394,6 +394,22 @@ Owner 把本轨道定为一条串行工作线，共五段，现在只做第一�
 ### 会话复述（[MI]）
 
 先把行为守则定下来（Owner 逐条/整体批准），其他一切（首例、研究、第 ② 段、三个待答问题）都后推；理由是没有守则，会话每次回复都会有沟通问题、浪费 token。守则一旦批准即对本轨道立即生效。
+
+---
+
+## 补充 #5 · 2026-09-06 · 对浓缩版守则 12 条的批示（登记于 2026-09-06T13:21:10+08:00；Owner 第一次发送被中断，以下为完整的第二次发送，逐字）
+
+### Owner 原话（逐字，A 类）
+
+> 前5条中我要对3做一下说明:最早的场景是cahtgpt在进行建设工作时有一些它自己不能确定需要我排版的问题定下的这个约定,后来有各种需要人工复合的地方都适用这条要求,因此你注意不要曲解或者过度缩小这条约束的范围.我思考了一下认为真实的适用场景应该是当你或者其他agent对话/任务的工作过程有必须要告诉我(必须得确保我清楚地了解你想要表达的内容),就得按照这个要求输出内容.对第6条我不知道什么是五份核心文件,本agent(即meta-agent)和mnemosyne一样,我主要关注agent行为能达到的效果,其中的设计和行为我不是很关系且以人类的能力和精力也不大可能了解这些细节,所以具体怎么做,可以由你或者chatgpt pro来设计,我不做干涉.关于第八点,我仍然不关心细节,都有你来设计.第12条我不太明白是什么意思.其他的条目都没有异议.并且我建议你参考一下之前在mnemosyne建设过程中已经做过一次的"mnemosyne可移植行为约束"人工确认和复核说明工作的结论,当时核对过的规则不止十几条,那个任务是在chatgpt中进行的,现在应该在Alaya中有存档,如果没有找到存档你得明确告诉我.
+
+### 会话复述（[MI]）
+
+- 第 3 条：不得缩小范围。它的真实适用场景是——凡是我（或任何 agent 对话/任务）在工作过程中**必须让 Owner 清楚了解**的内容（不只是提问），都要按"背景＋意思＋后果"的方式输出。
+- 第 6、8 条：Owner 只关心效果，不关心也不打算了解怎么做；具体做法由我（或 ChatGPT Pro）设计，Owner 不干涉。→ 这两条从"待 Owner 批"改为"agent 内部程序"。
+- 第 12 条：Owner 不明白 → 我须用人话重讲。
+- 其余条目：无异议。
+- 新要求：参考 Mnemosyne 建设中做过的"可移植行为约束"人工确认与复核说明的结论（在 ChatGPT 做的，规则不止十几条，应存于 Alaya）；找不到必须明说。
 <!-- END supplements verbatim -->
 
 ## 核验方法
