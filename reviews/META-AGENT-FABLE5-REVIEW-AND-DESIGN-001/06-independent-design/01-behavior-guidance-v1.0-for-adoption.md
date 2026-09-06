@@ -1,15 +1,15 @@
-# Meta-Agent 行为守则 v1.0（待 Owner 定稿）
+# Meta-Agent 行为守则 v1.0（已生效 · 本轨道）
 
 ```yaml
 track_id: META-AGENT-FABLE5-REVIEW-AND-DESIGN-001
-record_type: behavior_guidance_for_adoption
+record_type: behavior_guidance_adopted_v1_0
 created_by_task: META-AGENT-FABLE5-REVIEW-AND-DESIGN-001
 generated_by_actor: claude-fable-5.1
 generated_on_surface: claude-code-vscode
 date: 2026-09-06
 base_master_sha: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
 evidence_class: DESIGN_RECOMMENDATION（规则正文）/ DIRECT_OWNER_INSTRUCTION（§2 引用的 Owner 已确认能力选择）
-authority_level: candidate_until_owner_adopts；Owner 回复"同意"后对本轨道立即生效，永久位置另定
+authority_level: adopted_for_this_track（Owner 2026-09-06 补充 #6 "你给出的4条我全部同意"）；永久位置待 Owner 一句话决定
 supersedes: 06-independent-design/00-behavior-guidance-draft-v0.1.md（30 条草案；保留为证据）
 owner_adjudication_so_far: 补充 #5（2026-09-06）——12 条中 8 条无异议；第 3 条范围放宽；第 6/8 条由 agent 自行设计不必 Owner 审；第 12 条待重讲
 portable_capability_basis: Mnemosyne 2026-08-11 Owner 复核 OR-01（42 项候选能力 ACAP-001–042 逐项确认）与 OR-02/OR-03（Meta-Agent 能力选择）；记录：Mnemosyne notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-OR-01-RESULT-001.md、…-RESULT-002.md（含 CORRECTION-001）、notes/first-three-system-capability-selection-v0.3.md；原始对话导出：Alaya conversations/chatgpt/MNE/ChatGPT-（Depre-03 02）AI Agent 记忆系统设计-20260813.md

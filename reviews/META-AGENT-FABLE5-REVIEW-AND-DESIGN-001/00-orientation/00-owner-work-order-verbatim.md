@@ -13,7 +13,7 @@ authority_level: non_execution_source_advisory
 work_order_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-work-order.md
 work_order_sha256: 3b1e5952b5394c580fcf006422daf6a4ded0ba11dc2fd7fc9c2fe11afbb63999
 supplements_register_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/receipts/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-owner-supplements.md
-supplements_register_sha256_at_copy: 836a5ee88d268183dbcd3688b27c32e3123424cb53a8c13f7b0a1e2a4a0b6692   # 2026-09-06 补充 #5 后更新
+supplements_register_sha256_at_copy: 9c06175161a98d0bfa472afaf7a17e1ac76f3cd287471cb0a881e405670b60fe   # 2026-09-06 补充 #6 后更新
 copied_at: 2026-09-03T09:49:35+08:00
 rule: 工作令 §12——Downloads 原件冻结；写入授权后原文＋全部补充按序进入本文件；此后 Owner 的新补充继续逐字追加在本文件 B 节（同时同步 Downloads 登记件），每条标日期与序号
 verification: 见文末"核验方法"；两段标记行之间的内容与原件字节一致
@@ -300,7 +300,7 @@ session_machine_name: "meta-agent-34 [9b1e59]"
 session_uuid: 5fbf7385-035e-4075-9703-5aaf05159b15
 evidence_class_of_owner_text: DIRECT_OWNER_INSTRUCTION
 evidence_class_of_session_restatement: MODEL_INFERENCE
-gate_status_after_this_entry: BEHAVIOR_GUIDANCE_FIRST_all_other_work_deferred_by_supplement_4
+gate_status_after_this_entry: BEHAVIOR_GUIDANCE_v1_0_ADOPTED_for_this_track_by_supplement_6
 ```
 
 ---
@@ -410,6 +410,18 @@ Owner 把本轨道定为一条串行工作线，共五段，现在只做第一�
 - 第 12 条：Owner 不明白 → 我须用人话重讲。
 - 其余条目：无异议。
 - 新要求：参考 Mnemosyne 建设中做过的"可移植行为约束"人工确认与复核说明的结论（在 ChatGPT 做的，规则不止十几条，应存于 Alaya）；找不到必须明说。
+
+---
+
+## 补充 #6 · 2026-09-06 · 守则 v1.0 定稿（登记于 2026-09-06T21:53:27+08:00）
+
+### Owner 原话（逐字，A 类）
+
+> 你给出的4条我全部同意
+
+### 会话复述（[MI]）
+
+Owner 同意守则 v1.0 的四点修订（第 3 条放宽、第 6/8 条降为内部程序、第 12 条重讲、其余 8 条不变＋Meta-Agent 专属 4 项能力）。守则自本条起对本轨道生效；永久位置另定。
 <!-- END supplements verbatim -->
 
 ## 核验方法
