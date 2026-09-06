@@ -13,7 +13,7 @@ authority_level: non_execution_source_advisory
 work_order_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-work-order.md
 work_order_sha256: 3b1e5952b5394c580fcf006422daf6a4ded0ba11dc2fd7fc9c2fe11afbb63999
 supplements_register_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/receipts/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-owner-supplements.md
-supplements_register_sha256_at_copy: c08c5af4f82a9f07e29e0bbe9dc9761dbc897a2ea4ddc69ee525dd832eebcdf7   # 2026-09-06 补充 #7 后更新
+supplements_register_sha256_at_copy: 223ce911b2a0b2a38baf3ef0aef3ee80879efba17f41b998bfba504233b90d78   # 2026-09-06 补充 #8 后更新
 copied_at: 2026-09-03T09:49:35+08:00
 rule: 工作令 §12——Downloads 原件冻结；写入授权后原文＋全部补充按序进入本文件；此后 Owner 的新补充继续逐字追加在本文件 B 节（同时同步 Downloads 登记件），每条标日期与序号
 verification: 见文末"核验方法"；两段标记行之间的内容与原件字节一致
@@ -436,6 +436,18 @@ Owner 同意守则 v1.0 的四点修订（第 3 条放宽、第 6/8 条降为内
 1. 首个真实用例 = B（为"从 JobSpecific 11 份需求中抽取公共库"设计 agent 组织）。
 2. 允许试用（前提确认：第一例就是上述 B）。
 3. 第三件（启用前提里的"健康评审"）Owner 不明所指，要求给足背景——本会话违反守则第 3 条，须重讲。
+
+---
+
+## 补充 #8 · 2026-09-06 · 对"非 Fable 健康评审"前提的解释（登记于 2026-09-06T22:24:49+08:00）
+
+### Owner 原话（逐字，A 类）
+
+> 我也记不清当时具体是怎么要求的了,但我应该没有显式提出过要用一个"非Fable的模型做检查",我猜想这条应该是chatgpt误读或者它自己设计的.当时所有的建设都是用chatgpt pro做的,并且我也一直考虑用fable5那个当时作为另一家厂商的最顶尖模型来进行复核评审和独立设计对比.因此如果是从mnemsoyne借鉴来的规则,那应该就是让Anthropic的最强模型做这个工作而不是chatgpt自己或者第三家模型,因为我并没有开通第三家厂商的付费服务(所以更不可能有第三家能媲美gpt pro和fable的顶尖模型可用).如果找不到更多关于这条的细节,那就按我这里解释的来执行.至于如果要做体检,那么产物放置位置就参考mnemosyne的做法和安排,或者你可以要求Mnemosyne做一些文件组织结构的设计.
+
+### 会话复述（[MI]）
+
+Owner 没有明确要求过"非 Fable 模型做检查"，怀疑是 ChatGPT 误读或自设；Owner 一贯打算用 Fable（Anthropic 最强模型）做复核评审与独立设计对比，且没有第三家付费服务。因此该前提应解释为"由 Anthropic 最强模型做的健康评审"。若查不到更多细节，就按此执行。若真要做体检，产物位置参照 Mnemosyne 的做法，或请 Mnemosyne 设计文件组织。
 <!-- END supplements verbatim -->
 
 ## 核验方法
