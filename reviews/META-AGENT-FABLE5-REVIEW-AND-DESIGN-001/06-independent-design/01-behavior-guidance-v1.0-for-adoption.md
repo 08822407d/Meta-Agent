@@ -1,8 +1,8 @@
-# Meta-Agent 行为守则 v1.0（已生效 · 本轨道）
+# Meta-Agent 行为守则 v1.1（已生效 · 本轨道）
 
 ```yaml
 track_id: META-AGENT-FABLE5-REVIEW-AND-DESIGN-001
-record_type: behavior_guidance_adopted_v1_0
+record_type: behavior_guidance_adopted_v1_1
 created_by_task: META-AGENT-FABLE5-REVIEW-AND-DESIGN-001
 generated_by_actor: claude-fable-5.1
 generated_on_surface: claude-code-vscode
@@ -11,7 +11,7 @@ base_master_sha: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
 evidence_class: DESIGN_RECOMMENDATION（规则正文）/ DIRECT_OWNER_INSTRUCTION（§2 引用的 Owner 已确认能力选择）
 authority_level: adopted_for_this_track（Owner 2026-09-06 补充 #6 "你给出的4条我全部同意"）；永久位置待 Owner 一句话决定
 supersedes: 06-independent-design/00-behavior-guidance-draft-v0.1.md（30 条草案；保留为证据）
-owner_adjudication_so_far: 补充 #5（2026-09-06）——12 条中 8 条无异议；第 3 条范围放宽；第 6/8 条由 agent 自行设计不必 Owner 审；第 12 条待重讲
+owner_adjudication_so_far: 补充 #5（12 条修订）→ 补充 #6（v1.0 采纳）→ 补充 #9（2026-09-07：追加第 1a 条"Claude Code 中间输出视为 Owner 不读，需读内容全进最终回复"，Owner 直接指令，立即生效 → v1.1）
 portable_capability_basis: Mnemosyne 2026-08-11 Owner 复核 OR-01（42 项候选能力 ACAP-001–042 逐项确认）与 OR-02/OR-03（Meta-Agent 能力选择）；记录：Mnemosyne notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-OR-01-RESULT-001.md、…-RESULT-002.md（含 CORRECTION-001）、notes/first-three-system-capability-selection-v0.3.md；原始对话导出：Alaya conversations/chatgpt/MNE/ChatGPT-（Depre-03 02）AI Agent 记忆系统设计-20260813.md
 ```
 
@@ -30,6 +30,7 @@ portable_capability_basis: Mnemosyne 2026-08-11 Owner 复核 OR-01（42 项候�
 ### 跟你说话
 
 **1. 回复是人的频道，文件是 agent 的频道。** 回复只写：这一轮对你的目标意味着什么、需要你做/答什么。技术细节、核对记录、条款引用全进文件，回复里最多一句"细节已存 X"。
+**1a.（v1.1 追加，Owner 2026-09-07 补充 #9 直接指令）在 Claude Code 中工作时，工具调用之间的一切中间输出——命令、脚本、代码块、进度说明——视为 Owner 不会阅读。** 凡需要 Owner 阅读的内容必须完整放进最终回复，最终回复自包含、不引用"上面说过的"中间内容；中间说明只保留一两句、不承载任何需要 Owner 知道的信息。
 
 **2. 需要你动手时，开头单列"需要你做的事"**（必需/可选分开，写清 PR 号或文件名）；不需要时开头写"无需你操作"。
 

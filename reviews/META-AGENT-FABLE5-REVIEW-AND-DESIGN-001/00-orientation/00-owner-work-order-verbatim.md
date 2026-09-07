@@ -13,7 +13,7 @@ authority_level: non_execution_source_advisory
 work_order_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-work-order.md
 work_order_sha256: 3b1e5952b5394c580fcf006422daf6a4ded0ba11dc2fd7fc9c2fe11afbb63999
 supplements_register_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/receipts/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-owner-supplements.md
-supplements_register_sha256_at_copy: 223ce911b2a0b2a38baf3ef0aef3ee80879efba17f41b998bfba504233b90d78   # 2026-09-06 补充 #8 后更新
+supplements_register_sha256_at_copy: 9f6415f9d051b3f42c684919bc2408c829ca068e1d39c92459c8f74b64518946   # 2026-09-07 补充 #9 后更新
 copied_at: 2026-09-03T09:49:35+08:00
 rule: 工作令 §12——Downloads 原件冻结；写入授权后原文＋全部补充按序进入本文件；此后 Owner 的新补充继续逐字追加在本文件 B 节（同时同步 Downloads 登记件），每条标日期与序号
 verification: 见文末"核验方法"；两段标记行之间的内容与原件字节一致
@@ -448,6 +448,20 @@ Owner 同意守则 v1.0 的四点修订（第 3 条放宽、第 6/8 条降为内
 ### 会话复述（[MI]）
 
 Owner 没有明确要求过"非 Fable 模型做检查"，怀疑是 ChatGPT 误读或自设；Owner 一贯打算用 Fable（Anthropic 最强模型）做复核评审与独立设计对比，且没有第三家付费服务。因此该前提应解释为"由 Anthropic 最强模型做的健康评审"。若查不到更多细节，就按此执行。若真要做体检，产物位置参照 Mnemosyne 的做法，或请 Mnemosyne 设计文件组织。
+
+---
+
+## 补充 #9 · 2026-09-07 · Claude Code 中的中间输出规则；确认守则是否已加载（登记于 2026-09-07T19:16:43+08:00）
+
+### Owner 原话（逐字，A 类）
+
+> 我先不回答你的这些问题,你先补充一点当agent任务/对话在claude code中进行时应当注意的情况.当claude code运作时会把工作流程执行的一些命令或脚本内容(总之就是一些代码块)和中间回复内容混在一起,而由于这部分输出看起来比较混乱,我通常不会看这部分的输出内容.所以如果agent的对话/任务是在claude code中进行时,不要假定和期望我会读这部分中间内容,如果真有需要我阅读的就全部放到最终输出.然后就是我需要确认下现在你有没有加载适用于meta-agent的行为规范.如果没有,那么将这些行为规范落实到当前任务中是当务之急.
+
+### 会话复述（[MI]）
+
+1. 门 G1 的三题暂不答。
+2. 新规则（直接指令，立即生效）：在 Claude Code 中工作时，工具调用之间的中间输出（命令、脚本、进度说明）Owner 不看；凡需要 Owner 阅读的内容必须全部放进最终回复，且最终回复自包含。→ 写入守则 v1.1，作为第 1 条的补充。
+3. 要求确认本会话已加载 Meta-Agent 行为守则；若未加载，落实守则是当务之急。
 <!-- END supplements verbatim -->
 
 ## 核验方法
