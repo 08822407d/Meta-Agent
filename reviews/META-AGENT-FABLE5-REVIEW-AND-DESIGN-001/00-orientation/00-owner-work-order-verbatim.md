@@ -13,7 +13,7 @@ authority_level: non_execution_source_advisory
 work_order_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-work-order.md
 work_order_sha256: 3b1e5952b5394c580fcf006422daf6a4ded0ba11dc2fd7fc9c2fe11afbb63999
 supplements_register_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/receipts/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-owner-supplements.md
-supplements_register_sha256_at_copy: 9f6415f9d051b3f42c684919bc2408c829ca068e1d39c92459c8f74b64518946   # 2026-09-07 补充 #9 后更新
+supplements_register_sha256_at_copy: 18f6673cc8bd1524090671c81e9dc791ddf4b12379ecb166dc38f826a8349ffe   # 2026-09-10 补充 #10 后更新
 copied_at: 2026-09-03T09:49:35+08:00
 rule: 工作令 §12——Downloads 原件冻结；写入授权后原文＋全部补充按序进入本文件；此后 Owner 的新补充继续逐字追加在本文件 B 节（同时同步 Downloads 登记件），每条标日期与序号
 verification: 见文末"核验方法"；两段标记行之间的内容与原件字节一致
@@ -462,6 +462,24 @@ Owner 没有明确要求过"非 Fable 模型做检查"，怀疑是 ChatGPT 误�
 1. 门 G1 的三题暂不答。
 2. 新规则（直接指令，立即生效）：在 Claude Code 中工作时，工具调用之间的中间输出（命令、脚本、进度说明）Owner 不看；凡需要 Owner 阅读的内容必须全部放进最终回复，且最终回复自包含。→ 写入守则 v1.1，作为第 1 条的补充。
 3. 要求确认本会话已加载 Meta-Agent 行为守则；若未加载，落实守则是当务之急。
+
+---
+
+## 补充 #10 · 2026-09-10 · 对门 G1 三题的答复与纠正（登记于 2026-09-10T11:38:07+08:00）
+
+### 过程性消息（Owner，2026-09-10，逐字）
+
+> 之前说的三个需要我决定的问题分别是什么，我在claude网页端远程控制当前claude code本地任务，我找不到相关上下文了
+
+### Owner 原话（逐字，A 类）
+
+> 第一个问题中你可能有误解，其中的"_legacy"后缀指的不是库本身过时，而是说这些后缀是专为旧版dotnet（即4.8.1和更早的名称中带有framework的版本）构建目标建立的构建专用项目，这个可能在libAEUtil的历史对话记录中有说明（只是有可能，我不确定真的记录了，因为修改libMiscUtil和libAEUtil是我首次使用agent帮助修改代码，当时还没有想那么多）。而你问现在要让体系化agent工作后的结果放在这些库的老地方还是新找一个地方，我认为应该放进这些库中，但在此之前有一些问题需要先解决，比如这些库的项目配置选项是否合适，内容分类是否合适，名称是否合适，库内部的文件夹组织结构是否合适等等。至于你看到的"工作用粗版。个人用精版"的拆分，这个我确实最近没有想起来，不过可以确定地是目前这些库代码所在位置本来就是工作用的，所以以后工作用粗版也都在这里，个人用的精版等稍后你根据自己的理解和我对接清楚更多细节后进行一些设计，然后创建专门仓库后将精版放在那里。关于第二个问题，我不太清楚你说的"8个能力族"的细节，也不知道你说的"第一批"的批次划分是什么情况，所以这个问题我没法给出意见。关于第三点，具体项目验证的工作会让本地codex完成，预计首个试用项目应该是"全球测图处理房屋尖角"，不过这个项目已经有codex任务在开发中，所以你不要让claude code直接开始测。
+
+### 会话复述（[MI]）
+
+1. 纠正：`_legacy` 后缀＝面向旧版 .NET Framework（4.8.1 及更早）的构建专用项目，不是"库过时"。新能力**放进现有库**；但先要解决库自身的问题：项目配置选项、内容分类、名称、内部文件夹组织是否合适。现有库位置本来就是工作用的，工作用粗版都留在这里；个人用精版以后对接清楚细节后另设计、另建专门仓库。
+2. Q2：Owner 不清楚"8 个能力族"与"第一批"的划分——本会话又违反守则第 3 条，须给足背景重讲。
+3. Q3：项目验证由本地 Codex 做；首个试用项目预计为"全球测图·处理房屋层尖角"，该项目已有 Codex 任务在开发中；**Claude Code 不得直接开始测试**。
 <!-- END supplements verbatim -->
 
 ## 核验方法
