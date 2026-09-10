@@ -13,7 +13,7 @@ authority_level: non_execution_source_advisory
 work_order_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-work-order.md
 work_order_sha256: 3b1e5952b5394c580fcf006422daf6a4ded0ba11dc2fd7fc9c2fe11afbb63999
 supplements_register_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/receipts/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-owner-supplements.md
-supplements_register_sha256_at_copy: 18f6673cc8bd1524090671c81e9dc791ddf4b12379ecb166dc38f826a8349ffe   # 2026-09-10 补充 #10 后更新
+supplements_register_sha256_at_copy: 877d9771872a3cf9aeec3616614471fdfc299dbf78e2fb07809e2539a4768ba2   # 2026-09-10 补充 #11 后更新
 copied_at: 2026-09-03T09:49:35+08:00
 rule: 工作令 §12——Downloads 原件冻结；写入授权后原文＋全部补充按序进入本文件；此后 Owner 的新补充继续逐字追加在本文件 B 节（同时同步 Downloads 登记件），每条标日期与序号
 verification: 见文末"核验方法"；两段标记行之间的内容与原件字节一致
@@ -480,6 +480,20 @@ Owner 没有明确要求过"非 Fable 模型做检查"，怀疑是 ChatGPT 误�
 1. 纠正：`_legacy` 后缀＝面向旧版 .NET Framework（4.8.1 及更早）的构建专用项目，不是"库过时"。新能力**放进现有库**；但先要解决库自身的问题：项目配置选项、内容分类、名称、内部文件夹组织是否合适。现有库位置本来就是工作用的，工作用粗版都留在这里；个人用精版以后对接清楚细节后另设计、另建专门仓库。
 2. Q2：Owner 不清楚"8 个能力族"与"第一批"的划分——本会话又违反守则第 3 条，须给足背景重讲。
 3. Q3：项目验证由本地 Codex 做；首个试用项目预计为"全球测图·处理房屋层尖角"，该项目已有 Codex 任务在开发中；**Claude Code 不得直接开始测试**。
+
+---
+
+## 补充 #11 · 2026-09-10 · 对能力族批次的意见；对"路由回 Meta-Agent"措辞的质疑（登记于 2026-09-10T19:12:38+08:00）
+
+### Owner 原话（逐字，A 类）
+
+> 第一批和第二批除13和14外的都是常见的开发中会提到的要求，只不过分成了与业务有关的和业务无关而开发中常用的两类，这里的业务指的是我作为开发者平时所接收的工作中的需求，第二类显然就属于这类业务需求。不过我觉得在开始施工前还是要对它们再做一遍补充说明，因为你从那些真实项目需求和开发记录中看到的版本是为了能完成业务需求而形成的最低要求版本，如果要专门做这些部分显然是需要仔细研究一遍的。至于第三批确实是不常见。而第17项中你提到了"这是 Meta-Agent 自己该管的，已路由回去"，让我有一些意外，这种说法就像是在表达当前任务不是meta-agent自身建设任务，我需要你确认一下（因为我记得很清楚当前任务在meta-agent本地仓库中开启且内容也是和建设meta-agent相关的）。
+
+### 会话复述（[MI]）
+
+1. 第一批＋第二批（13、14 除外）都是开发中常见要求，分两类：业务无关的开发常用件（第一批）与业务相关件（第二批；"业务"＝Owner 平时接的工作需求）。**施工前要对它们逐个再做一遍补充说明/仔细研究**，因为项目文档里的是"够完成业务的最低版本"。
+2. 第三批确实不常见。
+3. 第 17 项的措辞"路由回 Meta-Agent"让 Owner 疑惑当前任务是否被当成了非 Meta-Agent 建设任务 → 须澄清：本轨道就是 Meta-Agent 自身建设任务；"路由回去"指该项不进代码公共库任务清单，而回到本轨道自己的待办（原候选 A）。措辞失误。
 <!-- END supplements verbatim -->
 
 ## 核验方法
