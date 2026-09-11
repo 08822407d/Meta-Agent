@@ -13,7 +13,7 @@ authority_level: non_execution_source_advisory
 work_order_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-work-order.md
 work_order_sha256: 3b1e5952b5394c580fcf006422daf6a4ded0ba11dc2fd7fc9c2fe11afbb63999
 supplements_register_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/receipts/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-owner-supplements.md
-supplements_register_sha256_at_copy: f43b48dc39927be9bef6c58d827d9a097a23b97ac3bb1d34d652853972409216   # 2026-09-11 补充 #12 后更新
+supplements_register_sha256_at_copy: 2f448dd85cd956778ef509881acfe57a37c880453decfc4693b1853f279e9845   # 2026-09-11 补充 #13 后更新
 copied_at: 2026-09-03T09:49:35+08:00
 rule: 工作令 §12——Downloads 原件冻结；写入授权后原文＋全部补充按序进入本文件；此后 Owner 的新补充继续逐字追加在本文件 B 节（同时同步 Downloads 登记件），每条标日期与序号
 verification: 见文末"核验方法"；两段标记行之间的内容与原件字节一致
@@ -506,6 +506,26 @@ Owner 没有明确要求过"非 Fable 模型做检查"，怀疑是 ChatGPT 误�
 ### 会话复述（[MI]）
 
 Owner 要确认两点：借用是否已完成、是否已启用。→ 守则 v1.1 的借用是按 42 项能力做的；本次补做 Mnemosyne 13 份 guard 的逐份对照（§2.4），补齐 7 条细则（1b/3a/7a/9a/11a/11b/12d），明示 1 份暂不移植，升为 v1.2；启用状态＝本轨道已生效，永久位置待 Owner 定。
+
+---
+
+## 补充 #13 · 2026-09-11 · 确认 17 族≠42 项能力；要求重新"加载 Meta-Agent 约束指导"；要求概括建设进度与当初构想（登记于 2026-09-11T12:01:50+08:00）
+
+### 过程性消息（Owner，2026-09-11 11:45 本地，逐字）
+
+> 我再确认一下上上次对话中你给出的要我确认的“17 族一览”中的能力，你是不是把它们作为和“42 项可移植 agent 能力”同类型的内容来设计和讨论的？
+
+（会话当时的答复要点：不是同类。42 项是 agent 的行为规则；17 族是 C# 代码库的组件；只有 F17 与 Meta-Agent 自身待办重叠。）
+
+### Owner 原话（逐字，A 类；2026-09-11 11:52 本地）
+
+> 很好，我也认为那“17族能力”现在不适合当成“42 项可移植 agent 能力”同类。现在你再“加载meta-agent约束指导”（这个要求的意思就像Mnemosyne中的“加载Mnemosyne约束指导”）一次确保今后你的回复内容满足我的习惯以达到足够高的交流效率和舒适程度。我要确认的是本对话/任务在建设meta-agent这项工作上大致进行到什么步骤了。我很久没有构思meta-agent的用途和用法了，现在需要多接收一些概括性信息以回忆起我当初的想法。
+
+### 会话复述（[MI]）
+
+1. Owner 认可：17 个代码库能力族与 42 项可移植 agent 能力不是同类，不并列讨论。
+2. 指令："加载 Meta-Agent 约束指导"一次，语义同 Mnemosyne 的"加载 Mnemosyne 约束指导"。执行方式：按守则 §3-A 重新只读守则 v1.2 全文（06-independent-design/01），核对仓库核心文件自轨道起点未变、origin/master 仍为 1fdbd7a；加载不等于开工，不据此新开工作。
+3. 要求概括性信息，两项：(a) 本对话/任务在 Meta-Agent 建设上进行到哪一步；(b) Owner 当初关于 Meta-Agent 用途与用法的构想。→ 按守则 1a/3 在最终回复里自包含给出；来源：原话登记表 S-00…S-39（03-consistency-and-feasibility/00）、人话回顾（09-continuation/04）、检查点 06。不新写文件。
 <!-- END supplements verbatim -->
 
 ## 核验方法
