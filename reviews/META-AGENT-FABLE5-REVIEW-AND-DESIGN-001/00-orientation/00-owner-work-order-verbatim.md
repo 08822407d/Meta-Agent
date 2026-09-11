@@ -13,7 +13,7 @@ authority_level: non_execution_source_advisory
 work_order_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-work-order.md
 work_order_sha256: 3b1e5952b5394c580fcf006422daf6a4ded0ba11dc2fd7fc9c2fe11afbb63999
 supplements_register_original_path: /home/cheyh/Downloads/startup-packages-2026-09-02/receipts/META-AGENT-FABLE5-REVIEW-AND-DESIGN-001-owner-supplements.md
-supplements_register_sha256_at_copy: 877d9771872a3cf9aeec3616614471fdfc299dbf78e2fb07809e2539a4768ba2   # 2026-09-10 补充 #11 后更新
+supplements_register_sha256_at_copy: f43b48dc39927be9bef6c58d827d9a097a23b97ac3bb1d34d652853972409216   # 2026-09-11 补充 #12 后更新
 copied_at: 2026-09-03T09:49:35+08:00
 rule: 工作令 §12——Downloads 原件冻结；写入授权后原文＋全部补充按序进入本文件；此后 Owner 的新补充继续逐字追加在本文件 B 节（同时同步 Downloads 登记件），每条标日期与序号
 verification: 见文末"核验方法"；两段标记行之间的内容与原件字节一致
@@ -494,6 +494,18 @@ Owner 没有明确要求过"非 Fable 模型做检查"，怀疑是 ChatGPT 误�
 1. 第一批＋第二批（13、14 除外）都是开发中常见要求，分两类：业务无关的开发常用件（第一批）与业务相关件（第二批；"业务"＝Owner 平时接的工作需求）。**施工前要对它们逐个再做一遍补充说明/仔细研究**，因为项目文档里的是"够完成业务的最低版本"。
 2. 第三批确实不常见。
 3. 第 17 项的措辞"路由回 Meta-Agent"让 Owner 疑惑当前任务是否被当成了非 Meta-Agent 建设任务 → 须澄清：本轨道就是 Meta-Agent 自身建设任务；"路由回去"指该项不进代码公共库任务清单，而回到本轨道自己的待办（原候选 A）。措辞失误。
+
+---
+
+## 补充 #12 · 2026-09-11 · 确认 Mnemosyne 借用规范是否已加入并启用（登记于 2026-09-11T10:53:13+08:00）
+
+### Owner 原话（逐字，A 类）
+
+> 我需要确认之前说过的从mnemosyne借用合适的行为规范（约束指导），是否已经加入到meta-agent自己的行为规范（约束指导）中？是否已经启用了？
+
+### 会话复述（[MI]）
+
+Owner 要确认两点：借用是否已完成、是否已启用。→ 守则 v1.1 的借用是按 42 项能力做的；本次补做 Mnemosyne 13 份 guard 的逐份对照（§2.4），补齐 7 条细则（1b/3a/7a/9a/11a/11b/12d），明示 1 份暂不移植，升为 v1.2；启用状态＝本轨道已生效，永久位置待 Owner 定。
 <!-- END supplements verbatim -->
 
 ## 核验方法

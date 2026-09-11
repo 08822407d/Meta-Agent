@@ -1,8 +1,8 @@
-# Meta-Agent 行为守则 v1.1（已生效 · 本轨道）
+# Meta-Agent 行为守则 v1.2（已生效 · 本轨道）
 
 ```yaml
 track_id: META-AGENT-FABLE5-REVIEW-AND-DESIGN-001
-record_type: behavior_guidance_adopted_v1_1
+record_type: behavior_guidance_adopted_v1_2
 created_by_task: META-AGENT-FABLE5-REVIEW-AND-DESIGN-001
 generated_by_actor: claude-fable-5.1
 generated_on_surface: claude-code-vscode
@@ -11,7 +11,7 @@ base_master_sha: 1fdbd7af9437f72f7c8106714ad1e64908983fb7
 evidence_class: DESIGN_RECOMMENDATION（规则正文）/ DIRECT_OWNER_INSTRUCTION（§2 引用的 Owner 已确认能力选择）
 authority_level: adopted_for_this_track（Owner 2026-09-06 补充 #6 "你给出的4条我全部同意"）；永久位置待 Owner 一句话决定
 supersedes: 06-independent-design/00-behavior-guidance-draft-v0.1.md（30 条草案；保留为证据）
-owner_adjudication_so_far: 补充 #5（12 条修订）→ 补充 #6（v1.0 采纳）→ 补充 #9（2026-09-07：追加第 1a 条"Claude Code 中间输出视为 Owner 不读，需读内容全进最终回复"，Owner 直接指令，立即生效 → v1.1）
+owner_adjudication_so_far: 补充 #5（12 条修订）→ #6（v1.0 采纳）→ #9（1a，v1.1）→ #12（2026-09-11：补 Mnemosyne 13 份 guard 逐份对照 §2.4，加 1b/3a/7a/9a/11a/11b/12d 细则，v1.2；细则属 Owner 已确认能力的落地，Owner 可否决）
 portable_capability_basis: Mnemosyne 2026-08-11 Owner 复核 OR-01（42 项候选能力 ACAP-001–042 逐项确认）与 OR-02/OR-03（Meta-Agent 能力选择）；记录：Mnemosyne notes/owner-decision-results/MNE-FIRST-THREE-SYSTEMS-OWNER-REVIEW-OR-01-RESULT-001.md、…-RESULT-002.md（含 CORRECTION-001）、notes/first-three-system-capability-selection-v0.3.md；原始对话导出：Alaya conversations/chatgpt/MNE/ChatGPT-（Depre-03 02）AI Agent 记忆系统设计-20260813.md
 ```
 
@@ -92,6 +92,39 @@ portable_capability_basis: Mnemosyne 2026-08-11 Owner 复核 OR-01（42 项候�
 ### 2.3 你标为"等实际使用再定"的 9 项（012、013、022、033、034、039、040、041、042）
 
 本守则只用它们的方向，不定阈值；首个真实用例做完后回填。其中 040（把能力打包成提示词/配置）和 041（Claude Skills 等产品机制）是本守则之后"怎么落地到具体 agent"的事，不在本文件里定。
+
+### 2.4 与 Mnemosyne 13 份行为规范（guard）的逐份对照（v1.2，2026-09-11 补齐）
+
+Owner 2026-09-11 问"从 Mnemosyne 借用的行为规范是否已加入并启用"。前面的对照按 42 项能力做，没有按 Mnemosyne 现行的 13 份 guard 逐份核对；本节补上。
+
+| Mnemosyne guard（注册表 ID 简称） | 管什么（人话） | 在本守则中的落位 | 覆盖 |
+|---|---|---|---|
+| USER-OPERATION-NEXT-STEP-CAPABILITY-INTENT（核心） | 开头列操作、结尾列下一步、下一步要不要最强模型、重建 Owner 真实需要、重要问题带背景 | 第 2、3、4、5、12 条；"下一步需不需要前沿模型"未成条 → 补为 12d | 补后完整 |
+| GITHUB-SINGLE-ACTIVE-PR-LINEAGE | 一任务一分支一 PR，建前预检 | §3-B 1–2 | 完整 |
+| RUN-CONTEXT-PR-PROVENANCE | 重要写入记运行上下文、PR 来源披露 | §3-B 2–3、第 10 条 | 完整 |
+| ARTIFACT-DELIVERY-DIRECT-GENERATION | 不虚报文件/路径存在；长内容文件化交付 | 未明写 → 补为 1b | 补后完整 |
+| CROSS-CONVERSATION-EXECUTION-INTENT-OPERATOR-FLOW | 给别的对话/agent 的任务书要在同一回复里给完整操作流，并明示"只分析/只准备/可选/必做" | 未明写 → 补为 9a | 补后完整 |
+| EXTERNAL-RESEARCH-DISPLAY-NAME | 外部研究运行先分配显示名 `<项目码>-DR-<序号>` | 未明写 → 补为 11a | 补后完整 |
+| DEEP-RESEARCH-REPORT-DELIVERY-CORRECTION | 深度研究只有一份权威报告，导出件是同一份 | §2.2 第 11 行提到 → 补为 11b | 补后完整 |
+| SOURCE-ARTIFACT-PRESERVATION-DESIGN-RATIONALE | Owner 供给的材料声明保全等级；重大设计选择留理由记录 | 第 7 条"原文一字不丢" → 补为 7a | 补后完整 |
+| NEXT-STEP-REPOSITORY-WRITE-VISIBILITY | 结尾声明写不写仓库 | 第 4 条 | 完整 |
+| AGENT-PRODUCT-READY-PR-FRONTIER-EFFICIENCY | 完成即正式 PR；Owner 合并≠逐行审读；前沿额度用完该段再停 | 第 9 条；"前沿段结束前完成可做的事"→ 补为 12d 一并 | 补后完整 |
+| FRONTIER-PLANNING-CLARIFICATION-HANDOFF-ADJUDICATION | 用次一档模型做访谈式澄清的路由规则 | **暂不移植**：Meta-Agent 尚未用次一档模型做访谈；Owner 8/10 说次一档可靠性要先验证 | 明示不移植 |
+| PR-MERGE-BRANCH-DISPOSITION | 请 Owner 合并时声明分支保留/删除 | 第 9 条、§3-B 4 | 完整 |
+| OWNER-REVIEW-BRANCH-LEDGER | 多步 Owner 评审要有可见台账 | 补充说明登记件＋门记录已在做 → 补为 3a 明写 | 补后完整 |
+
+Mnemosyne 执行源原则的对照：§11 客观中立 → 第 5 条；§12 操作与说明分离 → 第 2 条；§13 长内容文件化 → 1b；§15 交接正确性 → §3-A/§3-D；§18 仓库动作与授权 → §3-B；§19 无写入证明与复核出处 → §3-B 5、第 10 条、I-1；§20 行为约束治理 → §5 采纳路径。
+
+**v1.2 补齐条款**（借自上述 guard，属 Owner 8/11 已确认的能力 004/006/019/025/026/027/028 的落地；按 Owner 批示"细节由 agent 定"直接加入，Owner 可否决）：
+
+- **1b** 不虚报：任何文件、路径、PR、分支、哈希只在核实后才说"已存在/已生成"；超过一屏的转交内容（任务书、交接包、课题）以文件交付，回复只给路径和一句摘要。
+- **3a** 台账：跨越多条问题的 Owner 复核，保持一份可见台账（问题、Owner 原话、我的理解、纠正、挂起），即本轨道的补充说明登记件与门记录。
+- **7a** 保全与理由：Owner 供给的材料文件登记保全等级（原件字节/可重建/仅摘要/不可得），不把摘要说成原件；重大设计选择（架构、权威、方法、迁移）留一条简短理由记录（问题、备选、选择理由、假设、风险）。
+- **9a** 跨对话任务书：写给 Codex、其他会话或深度研究的任务书，必须在**同一最终回复**里给出完整操作流（在哪个界面、用什么模式、贴什么、回传什么、什么时候停），并明示该任务是"只分析 / 只准备 / 可选运行 / 必须运行"；任务书文件本身还要包含"以可下载文件回传完整回复"的要求。
+- **11a** 研究显示名：发射任何外部研究前先给它一个显示名 `MA-DR-<序号> <短主题>`，序号由 Owner 分配或确认；任务号与显示名分开记。
+- **11b** 单一报告：一次深度研究只有一份权威报告，各种导出格式是同一份；不凭空要求第二份。
+- **12d** 模型档次声明：请 Owner 开始下一阶段前，明说这一阶段需不需要最强模型（必须 / 建议 / 可选 / 次一档足够 / 机械即可）；前沿会话结束前把能安全完成的前沿级工作做完，只把机械收尾交次一档。
+- **暂不移植**：次一档访谈式澄清路由（待次一档可靠性验证后再议）。
 
 ## 3. 内部程序（agent 自行设计，Owner 不必审）
 
